@@ -1,0 +1,3130 @@
+{
+  "tripName": "The Balkans May 2026",
+  "startDate": "2026-05-04",
+  "endDate": "2026-05-29",
+  "travellers": [
+    {
+      "name": "Garry Egan"
+    },
+    {
+      "name": "Judy Egan"
+    },
+    {
+      "name": "Neville Schot"
+    },
+    {
+      "name": "Heather Adcock-Schot"
+    }
+  ],
+  "tripOverview": {
+
+    "generalNotes": [
+      "This itinerary includes a Trip‑a‑Deal guided tour covering Bulgaria, North Macedonia, Albania, Montenegro, Croatia, Bosnia and Herzegovina, and Slovenia.",
+      "Independent travel days occur in Sofia, Zagreb, and Budapest.",
+      "Multiple time zones are crossed - ensure devices auto‑update.",
+      "Keep passports accessible for frequent border crossings in the Balkans.",
+      "Local currencies vary - card acceptance is widespread but cash is useful in smaller towns."
+    ],
+    "maps": [
+      {
+        "label": "Sofia, Bulgaria",
+        "url": "https://maps.google.com/?q=Sofia"
+      },
+      {
+        "label": "Skopje, North Macedonia",
+        "url": "https://maps.google.com/?q=Skopje"
+      },
+      {
+        "label": "Ohrid, North Macedonia",
+        "url": "https://maps.google.com/?q=Ohrid"
+      },
+      {
+        "label": "Tirana, Albania",
+        "url": "https://maps.google.com/?q=Tirana"
+      },
+      {
+        "label": "Shkodër, Albania",
+        "url": "https://maps.google.com/?q=Shkoder"
+      },
+      {
+        "label": "Budva, Montenegro",
+        "url": "https://maps.google.com/?q=Budva"
+      },
+      {
+        "label": "Kotor, Montenegro",
+        "url": "https://maps.google.com/?q=Kotor"
+      },
+      {
+        "label": "Dubrovnik, Croatia",
+        "url": "https://maps.google.com/?q=Dubrovnik"
+      },
+      {
+        "label": "Neum, Bosnia and Herzegovina",
+        "url": "https://maps.google.com/?q=Neum"
+      },
+      {
+        "label": "Mostar, Bosnia and Herzegovina",
+        "url": "https://maps.google.com/?q=Mostar"
+      },
+      {
+        "label": "Split, Croatia",
+        "url": "https://maps.google.com/?q=Split"
+      },
+      {
+        "label": "Zadar, Croatia",
+        "url": "https://maps.google.com/?q=Zadar"
+      },
+      {
+        "label": "Plitvice Lakes, Croatia",
+        "url": "https://maps.google.com/?q=Plitvice+Lakes"
+      },
+      {
+        "label": "Ljubljana, Slovenia",
+        "url": "https://maps.google.com/?q=Ljubljana"
+      },
+      {
+        "label": "Lake Bled, Slovenia",
+        "url": "https://maps.google.com/?q=Lake+Bled"
+      },
+      {
+        "label": "Zagreb, Croatia",
+        "url": "https://maps.google.com/?q=Zagreb"
+      },
+      {
+        "label": "Budapest, Hungary",
+        "url": "https://maps.google.com/?q=Budapest"
+      },
+      {
+        "label": "Singapore",
+        "url": "https://maps.google.com/?q=Singapore"
+      },
+      {
+        "label": "Melbourne, Australia",
+        "url": "https://maps.google.com/?q=Melbourne"
+      }
+    ],
+    "weather": [
+      "May in the Balkans is spring - expect mild to warm temperatures (15–26°C).",
+      "Rain showers are possible, especially in mountainous regions.",
+      "Coastal areas (Montenegro, Croatia) are warmer and sunnier.",
+      "Budapest and Zagreb are typically warm with low rainfall in late May."
+    ],
+    "emergency": [
+      "EU countries (Croatia, Slovenia, Hungary): 112 (general emergency).",
+      "Bulgaria: 112.",
+      "North Macedonia: 112.",
+      "Albania: 112.",
+      "Montenegro: 112.",
+      "Bosnia and Herzegovina: 112.",
+      "Singapore: Police 999, Ambulance/Fire 995.",
+      "Australia: 000."
+    ],
+
+    "transportBasics": [
+      "Trip‑a‑Deal provides coach transport for guided days.",
+      "FlixBus used for Zagreb → Budapest transfer.",
+      "Local taxis and rideshare available in major cities.",
+      "Public transport reliable in Sofia, Ljubljana, Zagreb, Budapest.",
+      "Border crossings may require passport checks - keep documents accessible."
+    ]
+  },
+   
+  "segments": [
+    {
+      "type": "flight",
+      "title": "JQ33 MEL → DPS",
+      "description": "Jetstar 33 - MEL to DPS. Duration 6h10m. Airbus A321neo.",
+      "from": "Melbourne (MEL)",
+      "to": "Denpasar (DPS)",
+      "departLocal": "2026-05-04T15:50:00+10:00",
+      "arriveLocal": "2026-05-04T20:00:00+08:00",
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 1
+      },
+      "distanceKm": 4379,
+      "notes": [],
+      "bookingRefs": [
+        "XQDJWT",
+        "R3JNQ5",
+        "E8YSZM"
+      ],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Melbourne, Australia → Denpasar, Indonesia",
+          "lat": -8.6559348,
+          "lon": 115.2168231
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": null
+        },
+        "notes": "Total Cost Egans itinerary"
+      },
+      "flight": {
+        "flightNumber": "JQ33",
+        "origin": "Melbourne (MEL)",
+        "destination": "Denpasar (DPS)",
+        "airline": "Jetstar"
+      }
+    },
+    {
+      "type": "layover",
+      "title": "Layover - Denpasar (DPS)",
+      "description": "1h45m layover in Denpasar between MEL → DPS and DPS → IST.",
+      "from": "Denpasar (DPS)",
+      "to": "Denpasar (DPS)",
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": "2026-05-04T20:00:00+08:00",
+      "endLocal": "2026-05-04T21:45:00+08:00",
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 1
+      },
+      "distanceKm": null,
+      "notes": [
+        "1 hour, 45 minutes layover in Denpasar"
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Denpasar, Indonesia",
+          "lat": -8.6559348,
+          "lon": 115.2168231
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": null
+        },
+        "notes": null
+      }
+    },
+    {
+      "type": "flight",
+      "title": "TK311 DPS → IST",
+      "description": "Turkish Airlines 311 - DPS to IST. Duration 13h. Boeing 787-9.",
+      "from": "Denpasar (DPS)",
+      "to": "Istanbul (IST)",
+      "departLocal": "2026-05-04T21:45:00+08:00",
+      "arriveLocal": "2026-05-05T05:45:00+03:00",
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 1
+      },
+      "distanceKm": 10346,
+      "notes": [],
+      "bookingRefs": [
+        "XQDJWT",
+        "R3JNQ5",
+        "E8YSZM"
+      ],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Denpasar, Indonesia → Istanbul, Türkiye",
+          "lat": -8.6559348,
+          "lon": 115.2168231
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": null
+        },
+        "notes": "Total Cost Egans itinerary"
+      },
+      "flight": {
+        "flightNumber": "TK311",
+        "origin": "Denpasar (DPS)",
+        "destination": "Istanbul (IST)",
+        "airline": "Turkish"
+      }
+    },
+    {
+      "type": "layover",
+      "title": "Layover - Istanbul (IST)",
+      "description": "1h45m layover in Istanbul between DPS → IST and IST → SOF.",
+      "from": "Istanbul (IST)",
+      "to": "Istanbul (IST)",
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": "2026-05-05T05:45:00+03:00",
+      "endLocal": "2026-05-05T07:30:00+03:00",
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 2
+      },
+      "distanceKm": null,
+      "notes": [
+        "1 hour, 45 minutes layover in Istanbul"
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Istanbul, Türkiye",
+          "lat": 41.0082376,
+          "lon": 28.9783589
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": null
+        },
+        "notes": null
+      }
+    },
+    {
+      "type": "flight",
+      "title": "TK1027 IST → SOF",
+      "description": "Turkish Airlines 1027 - IST to SOF. Duration 1h15m. Airbus A321.",
+      "from": "Istanbul (IST)",
+      "to": "Sofia (SOF)",
+      "departLocal": "2026-05-05T07:30:00+03:00",
+      "arriveLocal": "2026-05-05T08:45:00+03:00",
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 2
+      },
+      "distanceKm": 468,
+      "notes": [],
+      "bookingRefs": [
+        "XQDJWT",
+        "R3JNQ5",
+        "E8YSZM"
+      ],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Istanbul, Türkiye → Sofia, Bulgaria",
+          "lat": 42.6977082,
+          "lon": 23.3218675
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": null
+        },
+        "notes": ""
+      },
+      "flight": {
+        "flightNumber": "TK1027",
+        "origin": "Istanbul (IST)",
+        "destination": "Sofia (SOF)",
+        "airline": "Turkish"
+      }
+    },
+    {
+      "type": "accommodation",
+      "title": "Budapest Hotel (self - 2 nights)",
+      "description": "Egans’ independent booking at Budapest Hotel Sofia.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": "2026-05-05T14:00:00+03:00",
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 2
+      },
+      "distanceKm": null,
+      "notes": [],
+      "bookingRefs": [],
+      "confirmation": "5607018665",
+      "website": "http://hotelbudapest.bg/",
+      "phone": "02 421 5800",
+      "address": "Sofia Center, ul. Budapeshta 92, 1202 Sofia, Bulgaria",
+      "locations": [
+        {
+          "name": "Sofia, Bulgaria",
+          "lat": 42.6977082,
+          "lon": 23.3218675
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": "2026-05-05",
+        "local": {
+          "amount": 156.6,
+          "currency": "EUR"
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": null
+        },
+        "notes": "Egans accommodation - 2 nights"
+      }
+    },
+    {
+      "type": "activity",
+      "title": "Free day to explore Sofia",
+      "description": "Independent free day in Sofia while awaiting Schots’ arrival.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": "2026-05-06T09:00:00+03:00",
+      "endLocal": "2026-05-06T18:00:00+03:00",
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 3
+      },
+      "distanceKm": null,
+      "notes": [
+        "Awaiting Schots to arrive into Sofia at 20:15 EEST."
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Sofia, Bulgaria",
+          "lat": 42.6977082,
+          "lon": 23.3218675
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": null
+        },
+        "notes": null
+      }
+    },
+    {
+      "type": "note",
+      "title": "Schots arrive into Sofia",
+      "description": "Neville & Heather arrive in Sofia.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": "2026-05-06T20:15:00+03:00",
+      "endLocal": null,
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 3
+      },
+      "distanceKm": null,
+      "notes": [
+        "Flight TK1029 IST → SOF"
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Sofia, Bulgaria",
+          "lat": 42.6977082,
+          "lon": 23.3218675
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": null
+        },
+        "notes": null
+      }
+    },
+    {
+      "type": "accommodation",
+      "title": "Budapest Hotel (self - 2 nights)",
+      "description": "Check-out from Budapest Hotel Sofia (Egans).",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": null,
+      "checkOutLocal": "2026-05-07T10:00:00+03:00",
+      "provider": {
+        "name": null,
+        "dayNumber": 4
+      },
+      "distanceKm": null,
+      "notes": [],
+      "bookingRefs": [],
+      "confirmation": "5607018665",
+      "website": "http://hotelbudapest.bg/",
+      "phone": "02 421 5800",
+      "address": "Sofia Center, ul. Budapeshta 92, 1202 Sofia, Bulgaria",
+      "locations": [
+        {
+          "name": "Sofia, Bulgaria",
+          "lat": 42.6977082,
+          "lon": 23.3218675
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": "2026-05-07",
+        "local": {
+          "amount": 0,
+          "currency": "EUR"
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": ""
+      }
+    },
+    {
+      "type": "tour",
+      "title": "Trip-a-Deal Day 2 - Welcome to Sofia",
+      "description": "Welcome to Sofia with Trip-a-Deal tour leader and orientation.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": "2026-05-07T12:00:00+03:00",
+      "endLocal": "2026-05-07T18:00:00+03:00",
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 2
+      },
+      "distanceKm": null,
+      "notes": [],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Sofia, Bulgaria",
+          "lat": 42.6977082,
+          "lon": 23.3218675
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Included in Trip-a-Deal package"
+      }
+    },
+    {
+      "type": "accommodation",
+      "title": "Budapest Hotel (Trip-a-Deal)",
+      "description": "Trip-a-Deal provided accommodation in Sofia.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": "2026-05-07T13:00:00+03:00",
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 2
+      },
+      "distanceKm": null,
+      "notes": [
+        "Trip-a-Deal provided accommodation"
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": "http://hotelbudapest.bg/",
+      "phone": "02 421 5800",
+      "address": "Sofia Center, ul. Budapeshta 92, 1202 Sofia, Bulgaria",
+      "locations": [
+        {
+          "name": "Sofia, Bulgaria",
+          "lat": 42.6977082,
+          "lon": 23.3218675
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Trip-a-Deal provided accommodation"
+      }
+    },
+    {
+      "type": "accommodation",
+      "title": "Budapest Hotel (Trip-a-Deal)",
+      "description": "Check-out from Trip-a-Deal accommodation in Sofia.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": null,
+      "checkOutLocal": "2026-05-08T08:30:00+03:00",
+      "provider": {
+        "name": null,
+        "dayNumber": 3
+      },
+      "distanceKm": null,
+      "notes": [
+        "Trip-a-Deal provided accommodation"
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": "http://hotelbudapest.bg/",
+      "phone": "02 421 5800",
+      "address": "Sofia Center, ul. Budapeshta 92, 1202 Sofia, Bulgaria",
+      "locations": [
+        {
+          "name": "Sofia, Bulgaria",
+          "lat": 42.6977082,
+          "lon": 23.3218675
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Trip-a-Deal provided accommodation"
+      }
+    },
+    {
+      "type": "tour",
+      "title": "Trip-a-Deal Day 3 - Sofia to Skopje",
+      "description": "City tour of Sofia then coach to Skopje, North Macedonia (~240 km).",
+      "from": "Sofia, Bulgaria",
+      "to": "Skopje, North Macedonia",
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": "2026-05-08T09:00:00+03:00",
+      "endLocal": "2026-05-08T18:00:00+02:00",
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 3
+      },
+      "distanceKm": 240,
+      "notes": [
+        "Guided city tour of Sofia including Alexander Nevsky Cathedral and main sights.",
+        "Afternoon coach to Skopje, birthplace of Mother Teresa."
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Sofia, Bulgaria",
+          "lat": 42.6977082,
+          "lon": 23.3218675
+        },
+        {
+          "name": "Skopje, North Macedonia",
+          "lat": 41.9981294,
+          "lon": 21.4254355
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Included in Trip-a-Deal package"
+      }
+    },
+    {
+      "type": "accommodation",
+      "title": "Resort & Spa Bushi",
+      "description": "Trip-a-Deal accommodation in Skopje.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": "2026-05-08T16:00:00+02:00",
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 3
+      },
+      "distanceKm": null,
+      "notes": [
+        "Trip-a-Deal provided accommodation"
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": "http://www.bushiresort.com/",
+      "phone": "02 312 5130",
+      "address": "Samoilova 5, Skopje 1000, North Macedonia",
+      "locations": [
+        {
+          "name": "Skopje, North Macedonia",
+          "lat": 41.9981294,
+          "lon": 21.4254355
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Trip-a-Deal provided accommodation"
+      }
+    },
+    {
+      "type": "tour",
+      "title": "Trip-a-Deal Day 4 - Skopje to Ohrid",
+      "description": "Leisure time in Skopje then travel to Lake Ohrid and guided tour of the old city.",
+      "from": "Skopje, North Macedonia",
+      "to": "Sveti Stefan (Ohrid area), North Macedonia",
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": "2026-05-09T09:00:00+02:00",
+      "endLocal": "2026-05-09T18:00:00+02:00",
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 4
+      },
+      "distanceKm": 170,
+      "notes": [
+        "Morning leisure and landmarks in Skopje including Old Bazaar and Kale Fortress.",
+        "Afternoon travel to Lake Ohrid and half-day guided tour of Ohrid old city."
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Skopje, North Macedonia",
+          "lat": 41.9981294,
+          "lon": 21.4254355
+        },
+        {
+          "name": "Sveti Stefan (Ohrid area), North Macedonia",
+          "lat": 41.0753127,
+          "lon": 20.8023932
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Included in Trip-a-Deal package"
+      }
+    },
+    {
+      "type": "accommodation",
+      "title": "Resort & Spa Bushi",
+      "description": "Check-out from Skopje hotel.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": null,
+      "checkOutLocal": "2026-05-09T08:30:00+02:00",
+      "provider": {
+        "name": null,
+        "dayNumber": 4
+      },
+      "distanceKm": null,
+      "notes": [
+        "Trip-a-Deal provided accommodation"
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": "http://www.bushiresort.com/",
+      "phone": "02 312 5130",
+      "address": "Samoilova 5, Skopje 1000, North Macedonia",
+      "locations": [
+        {
+          "name": "Skopje, North Macedonia",
+          "lat": 41.9981294,
+          "lon": 21.4254355
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Trip-a-Deal provided accommodation"
+      }
+    },
+    {
+      "type": "accommodation",
+      "title": "Hotel Belvedere",
+      "description": "Trip-a-Deal accommodation near Ohrid (Sveti Stefan).",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": "2026-05-09T16:00:00+02:00",
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 4
+      },
+      "distanceKm": null,
+      "notes": [
+        "Trip-a-Deal provided accommodation"
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": "https://hotelbelvedere.mk/",
+      "phone": "046 277 720",
+      "address": "Sveti Stefan 6000, North Macedonia",
+      "locations": [
+        {
+          "name": "Sveti Stefan (Ohrid area), North Macedonia",
+          "lat": 41.0753127,
+          "lon": 20.8023932
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Trip-a-Deal provided accommodation"
+      }
+    },
+    {
+      "type": "tour",
+      "title": "Trip-a-Deal Day 5 - Ohrid to Tirana and Shkodër",
+      "description": "Travel from Ohrid to Tirana for city tour, then on to Shkodër, Albania.",
+      "from": "Ohrid, North Macedonia",
+      "to": "Shkodër, Albania",
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": "2026-05-10T09:00:00+02:00",
+      "endLocal": "2026-05-10T18:00:00+02:00",
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 5
+      },
+      "distanceKm": 230,
+      "notes": [
+        "Half-day guided tour of Tirana including Skanderbeg Square and Et'hem Bey Mosque.",
+        "Drive by Rozafa Castle and continue to Shkodër."
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Tirana, Albania",
+          "lat": 41.3275459,
+          "lon": 19.8186982
+        },
+        {
+          "name": "Shkodër, Albania",
+          "lat": 42.064714,
+          "lon": 19.5090237
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Included in Trip-a-Deal package"
+      }
+    },
+    {
+      "type": "accommodation",
+      "title": "Hotel Belvedere",
+      "description": "Check-out from Hotel Belvedere near Ohrid.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": null,
+      "checkOutLocal": "2026-05-10T08:30:00+02:00",
+      "provider": {
+        "name": null,
+        "dayNumber": 5
+      },
+      "distanceKm": null,
+      "notes": [
+        "Trip-a-Deal provided accommodation"
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": "https://hotelbelvedere.mk/",
+      "phone": "046 277 720",
+      "address": "Sveti Stefan 6000, North Macedonia",
+      "locations": [
+        {
+          "name": "Sveti Stefan (Ohrid area), North Macedonia",
+          "lat": 41.0753127,
+          "lon": 20.8023932
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Trip-a-Deal provided accommodation"
+      }
+    },
+    {
+      "type": "accommodation",
+      "title": "Hotel Colosseo & Spa",
+      "description": "Trip-a-Deal accommodation in Shkodër, Albania.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": "2026-05-10T16:00:00+02:00",
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 5
+      },
+      "distanceKm": null,
+      "notes": [
+        "Trip-a-Deal provided accommodation"
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": "https://www.colosseohotel.com/",
+      "phone": "068 206 0130",
+      "address": "Rruga Kolë Idromeno, Shkodër, Albania",
+      "locations": [
+        {
+          "name": "Shkodër, Albania",
+          "lat": 42.064714,
+          "lon": 19.5090237
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Trip-a-Deal provided accommodation"
+      }
+    },
+    {
+      "type": "tour",
+      "title": "Trip-a-Deal Day 6 - Shkodër to Budva via Podgorica and Lake Skadar",
+      "description": "Panoramic tour of Podgorica, visit Lake Skadar, then continue to Budva, Montenegro.",
+      "from": "Shkodër, Albania",
+      "to": "Budva, Montenegro",
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": "2026-05-11T09:00:00+02:00",
+      "endLocal": "2026-05-12T18:00:00+02:00",
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 6
+      },
+      "distanceKm": 110,
+      "notes": [
+        "Panoramic tour of Podgorica.",
+        "Visit Lake Skadar National Park.",
+        "Arrive Budva on the Adriatic coast."
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Podgorica, Budva, Montenegro",
+          "lat": 42.4304248,
+          "lon": 19.2593438
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Included in Trip-a-Deal package"
+      }
+    },
+    {
+      "type": "accommodation",
+      "title": "Hotel Colosseo & Spa",
+      "description": "Check-out from Shkodër hotel.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": null,
+      "checkOutLocal": "2026-05-11T08:30:00+02:00",
+      "provider": {
+        "name": null,
+        "dayNumber": 6
+      },
+      "distanceKm": null,
+      "notes": [
+        "Trip-a-Deal provided accommodation"
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": "https://www.colosseohotel.com/",
+      "phone": "068 206 0130",
+      "address": "Rruga Kolë Idromeno, Shkodër, Albania",
+      "locations": [
+        {
+          "name": "Shkodër, Albania",
+          "lat": 42.064714,
+          "lon": 19.5090237
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Trip-a-Deal provided accommodation"
+      }
+    },
+    {
+      "type": "accommodation",
+      "title": "Infinity Hotel & More",
+      "description": "Trip-a-Deal accommodation in Budva (2 nights).",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": "2026-05-11T16:00:00+02:00",
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 6
+      },
+      "distanceKm": null,
+      "notes": [
+        "Trip-a-Deal provided accommodation - 2 nights"
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": "http://www.infinityhotel.me/",
+      "phone": "068 693 693",
+      "address": "3 Prvomajska, Budva 85310, Montenegro",
+      "locations": [
+        {
+          "name": "Budva, Montenegro",
+          "lat": 42.2911489,
+          "lon": 18.840295
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Trip-a-Deal provided accommodation"
+      }
+    },
+    {
+      "type": "tour",
+      "title": "Trip-a-Deal Day 7 - Budva Free Day",
+      "description": "Free day in Budva, Montenegro (Virpazar & Lake Skadar excursion).",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": "2026-05-12T09:00:00+02:00",
+      "endLocal": "2026-05-12T18:00:00+02:00",
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 7
+      },
+      "distanceKm": null,
+      "notes": [
+        "Today enjoy a day at leisure in Budva, the centre of Montenegrin tourism, known for its well-preserved medieval walled city, sandy beaches and diverse nightlife.",
+        "Pre-paid Activity: Virpazar Traditional Villages, including a boat ride to Shkoder Lake. Virpazar is a gateway to Skadar Lake National Park, offering boat tours that explore traditional villages like Karuch and the lake's unique ecosystem with a wide variety of birds and water lilies. The boat trip includes scenic routes through narrow channels, visiting historical sites such as the medieval Kom Monastery or Lesendro fortress. A boat ride, park entrance and transportation are included."
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Budva, Montenegro",
+          "lat": 42.2911489,
+          "lon": 18.840295
+        },
+        {
+          "name": "Virpazar",
+          "lat": 42.238938,
+          "lon": 19.089904
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Included in Trip-a-Deal package (optional excursion extra)"
+      }
+    },
+    {
+      "type": "tour",
+      "title": "Trip-a-Deal Day 8 - Budva to Kotor to Dubrovnik",
+      "description": "Budva to Kotor (guided tour) then on to Dubrovnik, Croatia.",
+      "from": "Budva, Montenegro",
+      "to": "Dubrovnik, Croatia",
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": "2026-05-13T09:00:00+02:00",
+      "endLocal": "2026-05-14T18:00:00+02:00",
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 8
+      },
+      "distanceKm": 110,
+      "notes": [
+        "Half-day guided tour of Kotor (UNESCO).",
+        "Afternoon drive to Dubrovnik for overnight."
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Kotor, Montenegro",
+          "lat": 42.424662,
+          "lon": 18.771234
+        },
+        {
+          "name": "Dubrovnik, Croatia",
+          "lat": 42.65066059999999,
+          "lon": 18.0944238
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Included in Trip-a-Deal package"
+      }
+    },
+    {
+      "type": "accommodation",
+      "title": "Infinity Hotel & More",
+      "description": "Check-out from Budva hotel.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": null,
+      "checkOutLocal": "2026-05-13T08:30:00+02:00",
+      "provider": {
+        "name": null,
+        "dayNumber": 8
+      },
+      "distanceKm": null,
+      "notes": [
+        "Trip-a-Deal provided accommodation"
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": "http://www.infinityhotel.me/",
+      "phone": "068 693 693",
+      "address": "3 Prvomajska, Budva 85310, Montenegro",
+      "locations": [
+        {
+          "name": "Budva, Montenegro",
+          "lat": 42.2911489,
+          "lon": 18.840295
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Trip-a-Deal provided accommodation"
+      }
+    },
+    {
+      "type": "accommodation",
+      "title": "Sunny Dubrovnik by Valamar",
+      "description": "Trip-a-Deal accommodation in Dubrovnik.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": "2026-05-13T16:00:00+02:00",
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 8
+      },
+      "distanceKm": null,
+      "notes": [
+        "Trip-a-Deal provided accommodation"
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": "https://www.valamar.com/en/hotels-dubrovnik/valamar-club-dubrovnik",
+      "phone": "052 465 000",
+      "address": "Ul. Iva Dulčića 38, 20000, Dubrovnik, Croatia",
+      "locations": [
+        {
+          "name": "Dubrovnik, Croatia",
+          "lat": 42.65066059999999,
+          "lon": 18.0944238
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Trip-a-Deal provided accommodation"
+      }
+    },
+    {
+      "type": "tour",
+      "title": "Trip-a-Deal Day 9 - Dubrovnik to Neum",
+      "description": "Half-day guided tour of Dubrovnik then travel to Neum, Bosnia and Herzegovina.",
+      "from": "Dubrovnik, Croatia",
+      "to": "Neum, Bosnia and Herzegovina",
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": "2026-05-14T09:00:00+02:00",
+      "endLocal": "2026-05-15T18:00:00+02:00",
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 9
+      },
+      "distanceKm": 65,
+      "notes": [
+        "Guided tour of Dubrovnik including Sponza Palace and city walls (entrances extra).",
+        "Afternoon travel along Adriatic coast to Neum."
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Dubrovnik, Croatia",
+          "lat": 42.65066059999999,
+          "lon": 18.0944238
+        },
+        {
+          "name": "Neum, Bosnia and Herzegovina",
+          "lat": 42.9260159,
+          "lon": 17.6154906
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Included in Trip-a-Deal package"
+      }
+    },
+    {
+      "type": "accommodation",
+      "title": "Sunny Dubrovnik by Valamar",
+      "description": "Check-out from Dubrovnik hotel.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": null,
+      "checkOutLocal": "2026-05-14T08:30:00+02:00",
+      "provider": {
+        "name": null,
+        "dayNumber": 9
+      },
+      "distanceKm": null,
+      "notes": [
+        "Trip-a-Deal provided accommodation"
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": "https://www.valamar.com/en/hotels-dubrovnik/valamar-club-dubrovnik",
+      "phone": "052 465 000",
+      "address": "Ul. Iva Dulčića 38, 20000, Dubrovnik, Croatia",
+      "locations": [
+        {
+          "name": "Dubrovnik, Croatia",
+          "lat": 42.65066059999999,
+          "lon": 18.0944238
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Trip-a-Deal provided accommodation"
+      }
+    },
+    {
+      "type": "accommodation",
+      "title": "Marea Hotel & Spa",
+      "description": "Trip-a-Deal accommodation in Neum.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": "2026-05-14T16:00:00+02:00",
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 9
+      },
+      "distanceKm": null,
+      "notes": [
+        "Trip-a-Deal provided accommodation"
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": "http://www.hotelmarea.ba/",
+      "phone": "036 880-555",
+      "address": "Ruđera Boškovića b.b, Neum 88390, Bosnia and Herzegovina",
+      "locations": [
+        {
+          "name": "Neum, Bosnia and Herzegovina",
+          "lat": 42.9260159,
+          "lon": 17.6154906
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Trip-a-Deal provided accommodation"
+      }
+    },
+    {
+      "type": "tour",
+      "title": "Trip-a-Deal Day 10 - Neum to Mostar to Split",
+      "description": "Travel from Neum to Mostar (guided tour) then on to Split, Croatia.",
+      "from": "Neum, Bosnia and Herzegovina",
+      "to": "Split, Croatia",
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": "2026-05-15T09:00:00+02:00",
+      "endLocal": "2026-05-16T18:00:00+02:00",
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 10
+      },
+      "distanceKm": 250,
+      "notes": [
+        "Guided walking tour of Mostar including Stari Most.",
+        "Afternoon travel to Split and guided tour of Diocletian’s Palace."
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Neum, Bosnia and Herzegovina",
+          "lat": 42.9260159,
+          "lon": 17.6154906
+        },
+        {
+          "name": "Mostar, Bosnia and Herzegovina",
+          "lat": 43.34377480000001,
+          "lon": 17.8077578
+        },
+        {
+          "name": "Split, Croatia",
+          "lat": 43.5147118,
+          "lon": 16.4435148
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Included in Trip-a-Deal package"
+      }
+    },
+    {
+      "type": "accommodation",
+      "title": "Marea Hotel & Spa",
+      "description": "Check-out from Neum hotel.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": null,
+      "checkOutLocal": "2026-05-15T08:30:00+02:00",
+      "provider": {
+        "name": null,
+        "dayNumber": 10
+      },
+      "distanceKm": null,
+      "notes": [
+        "Trip-a-Deal provided accommodation"
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": "http://www.hotelmarea.ba/",
+      "phone": "036 880-555",
+      "address": "Ruđera Boškovića b.b, Neum 88390, Bosnia and Herzegovina",
+      "locations": [
+        {
+          "name": "Neum, Bosnia and Herzegovina",
+          "lat": 42.9260159,
+          "lon": 17.6154906
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Trip-a-Deal provided accommodation"
+      }
+    },
+    {
+      "type": "accommodation",
+      "title": "AC Hotel Split",
+      "description": "Trip-a-Deal accommodation in Split.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": "2026-05-15T16:00:00+02:00",
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 10
+      },
+      "distanceKm": null,
+      "notes": [
+        "Trip-a-Deal provided accommodation"
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": "https://www.marriott.com/en-us/hotels/spuac-ac-hotel-split/overview/",
+      "phone": "021 226 600",
+      "address": "Ul. Domovinskog rata 61A, 21000, Split, Croatia",
+      "locations": [
+        {
+          "name": "Split, Croatia",
+          "lat": 43.5147118,
+          "lon": 16.4435148
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Trip-a-Deal provided accommodation"
+      }
+    },
+    {
+      "type": "tour",
+      "title": "Trip-a-Deal Day 11 - Split to Zadar to Plitvička Jezera",
+      "description": "Visit Zadar then continue to Plitvice Lakes National Park.",
+      "from": "Split, Croatia",
+      "to": "Plitvička Jezera, Croatia",
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": "2026-05-16T09:00:00+02:00",
+      "endLocal": "2026-05-17T18:00:00+02:00",
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 11
+      },
+      "distanceKm": 290,
+      "notes": [
+        "Tour of Zadar old town and seafront.",
+        "Afternoon drive to Plitvice Lakes National Park (entry ticket extra)."
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Zadar, Croatia",
+          "lat": 44.119371,
+          "lon": 15.2313648
+        },
+        {
+          "name": "Plitvička Jezera, Croatia",
+          "lat": 44.8820957,
+          "lon": 15.6233311
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Plitvice entry ticket already pre-purchased"
+      }
+    },
+    {
+      "type": "accommodation",
+      "title": "AC Hotel Split",
+      "description": "Check-out from Split hotel.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": null,
+      "checkOutLocal": "2026-05-16T08:30:00+02:00",
+      "provider": {
+        "name": null,
+        "dayNumber": 11
+      },
+      "distanceKm": null,
+      "notes": [
+        "Trip-a-Deal provided accommodation"
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": "https://www.marriott.com/en-us/hotels/spuac-ac-hotel-split/overview/",
+      "phone": "021 226 600",
+      "address": "Ul. Domovinskog rata 61A, 21000, Split, Croatia",
+      "locations": [
+        {
+          "name": "Split, Croatia",
+          "lat": 43.5147118,
+          "lon": 16.4435148
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Trip-a-Deal provided accommodation"
+      }
+    },
+    {
+      "type": "accommodation",
+      "title": "Hotel Jezero",
+      "description": "Trip-a-Deal accommodation at Plitvice Lakes.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": "2026-05-16T16:00:00+02:00",
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 11
+      },
+      "distanceKm": null,
+      "notes": [
+        "Trip-a-Deal provided accommodation"
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": "https://np-plitvicka-jezera.hr/en/plan-your-visit/hotels-and-camps/hotel-jezero/",
+      "phone": "053 751 400",
+      "address": "Josipa Jovića 19, 53231, Plitvička Jezera, Croatia",
+      "locations": [
+        {
+          "name": "Plitvička Jezera, Croatia",
+          "lat": 44.8820957,
+          "lon": 15.6233311
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Trip-a-Deal provided accommodation"
+      }
+    },
+    {
+      "type": "tour",
+      "title": "Trip-a-Deal Day 12 - Plitvice to Rastoke to Ljubljana",
+      "description": "Visit Rastoke village then continue to Ljubljana, Slovenia.",
+      "from": "Plitvička Jezera, Croatia",
+      "to": "Ljubljana, Slovenia",
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": "2026-05-17T09:00:00+02:00",
+      "endLocal": "2026-05-18T18:00:00+02:00",
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 12
+      },
+      "distanceKm": 250,
+      "notes": [
+        "Stop at Rastoke village (waterfalls and watermills).",
+        "Continue to Ljubljana and check into hotel."
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Plitvička Jezera, Croatia",
+          "lat": 44.8820957,
+          "lon": 15.6233311
+        },
+        {
+          "name": "Rastoke, Croatia",
+          "lat": 45.1203863,
+          "lon": 15.5862736
+        },
+        {
+          "name": "Ljubljana, Slovenia",
+          "lat": 46.0569465,
+          "lon": 14.5057515
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Included in Trip-a-Deal package"
+      }
+    },
+    {
+      "type": "accommodation",
+      "title": "Hotel Jezero",
+      "description": "Check-out from Plitvice hotel.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": null,
+      "checkOutLocal": "2026-05-17T08:30:00+02:00",
+      "provider": {
+        "name": null,
+        "dayNumber": 12
+      },
+      "distanceKm": null,
+      "notes": [
+        "Trip-a-Deal provided accommodation"
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": "https://np-plitvicka-jezera.hr/en/plan-your-visit/hotels-and-camps/hotel-jezero/",
+      "phone": "053 751 400",
+      "address": "Josipa Jovića 19, 53231, Plitvička Jezera, Croatia",
+      "locations": [
+        {
+          "name": "Plitvička Jezera, Croatia",
+          "lat": 44.8820957,
+          "lon": 15.6233311
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Trip-a-Deal provided accommodation"
+      }
+    },
+    {
+      "type": "accommodation",
+      "title": "Exe Lev",
+      "description": "Trip-a-Deal accommodation in Ljubljana (2 nights).",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": "2026-05-17T16:00:00+02:00",
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 12
+      },
+      "distanceKm": null,
+      "notes": [
+        "Trip-a-Deal provided accommodation - 2 nights"
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": "https://www.eurostarshotels.co.uk/exe-lev.html",
+      "phone": "(01) 308 78 00",
+      "address": "Vošnjakova ulica 1, 1000 Ljubljana, Slovenia",
+      "locations": [
+        {
+          "name": "Ljubljana, Slovenia",
+          "lat": 46.0569465,
+          "lon": 14.5057515
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Trip-a-Deal provided accommodation"
+      }
+    },
+    {
+      "type": "tour",
+      "title": "Trip-a-Deal Day 13 - Ljubljana City Tour",
+      "description": "Half-day guided tour of Ljubljana with optional Postojna Cave excursion.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": "2026-05-18T09:00:00+02:00",
+      "endLocal": "2026-05-18T18:00:00+02:00",
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 13
+      },
+      "distanceKm": 100,
+      "notes": [
+        "Guided tour of Ljubljana city centre.",
+        "Postojna Cave visit in the afternoon."
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Ljubljana, Slovenia",
+          "lat": 46.0569465,
+          "lon": 14.5057515
+        },
+        {
+          "name": "Postojna Cave, Slovenia",
+          "lat": 45.7830298,
+          "lon": 14.2038417
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Postojna Cave tour included"
+      }
+    },
+    {
+      "type": "accommodation",
+      "title": "Exe Lev",
+      "description": "Check-out from Ljubljana hotel.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": null,
+      "checkOutLocal": "2026-05-19T08:30:00+02:00",
+      "provider": {
+        "name": null,
+        "dayNumber": 14
+      },
+      "distanceKm": null,
+      "notes": [
+        "Trip-a-Deal provided accommodation"
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": "https://www.eurostarshotels.co.uk/exe-lev.html",
+      "phone": "(01) 308 78 00",
+      "address": "Vošnjakova ulica 1, 1000 Ljubljana, Slovenia",
+      "locations": [
+        {
+          "name": "Ljubljana, Slovenia",
+          "lat": 46.0569465,
+          "lon": 14.5057515
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Trip-a-Deal provided accommodation"
+      }
+    },
+    {
+      "type": "tour",
+      "title": "Trip-a-Deal Day 14 - Ljubljana to Lake Bled to Zagreb",
+      "description": "Visit Lake Bled and Bled Castle, then continue to Zagreb, Croatia.",
+      "from": "Ljubljana, Slovenia",
+      "to": "Zagreb, Croatia",
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": "2026-05-19T09:00:00+02:00",
+      "endLocal": "2026-05-19T18:00:00+02:00",
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 14
+      },
+      "distanceKm": 250,
+      "notes": [
+        "Guided visit to Lake Bled and Bled Castle (entry extra).",
+        "Optional pletna boat ride to Bled Island.",
+        "Continue to Zagreb for overnight."
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Ljubljana, Slovenia",
+          "lat": 46.0569465,
+          "lon": 14.5057515
+        },
+        {
+          "name": "Lake Bled, Slovenia",
+          "lat": 46.363598,
+          "lon": 14.0938053
+        },
+        {
+          "name": "Zagreb, Croatia",
+          "lat": 45.8150108,
+          "lon": 15.981919
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Included in Trip-a-Deal package"
+      }
+    },
+    {
+      "type": "accommodation",
+      "title": "Pullman Zagreb (Trip-a-Deal)",
+      "description": "Trip-a-Deal accommodation in Zagreb (2 nights).",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": "2026-05-19T16:00:00+02:00",
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 14
+      },
+      "distanceKm": null,
+      "notes": [
+        "Trip-a-Deal provided accommodation - 2 nights"
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": "https://all.accor.com/lien_externe.svt?goto=fiche_hotel&code_hotel=C030",
+      "phone": "01 8880 908",
+      "address": "Buzinski Krci 3A Buzin, 10010, Novi Zagreb - istok, Zagreb, Croatia",
+      "locations": [
+        {
+          "name": "Zagreb, Croatia",
+          "lat": 45.8150108,
+          "lon": 15.981919
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Trip-a-Deal provided accommodation"
+      }
+    },
+    {
+      "type": "tour",
+      "title": "Trip-a-Deal Day 15 - Zagreb City Tour",
+      "description": "Guided city tour of Zagreb.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": "2026-05-20T09:00:00+02:00",
+      "endLocal": "2026-05-20T18:00:00+02:00",
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 15
+      },
+      "distanceKm": null,
+      "notes": [
+        "Guided tour of Zagreb’s main sights."
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Zagreb, Croatia",
+          "lat": 45.8150108,
+          "lon": 15.981919
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Included in Trip-a-Deal package"
+      }
+    },
+    {
+      "type": "accommodation",
+      "title": "Pullman Zagreb (Trip-a-Deal)",
+      "description": "Check-out from Trip-a-Deal stay in Zagreb.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": null,
+      "checkOutLocal": "2026-05-21T08:30:00+02:00",
+      "provider": {
+        "name": null,
+        "dayNumber": 16
+      },
+      "distanceKm": null,
+      "notes": [
+        "Trip-a-Deal provided accommodation"
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": "https://all.accor.com/lien_externe.svt?goto=fiche_hotel&code_hotel=C030",
+      "phone": "01 8880 908",
+      "address": "Buzinski Krci 3A Buzin, 10010, Novi Zagreb - istok, Zagreb, Croatia",
+      "locations": [
+        {
+          "name": "Zagreb, Croatia",
+          "lat": 45.8150108,
+          "lon": 15.981919
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Trip-a-Deal provided accommodation"
+      }
+    },
+    {
+      "type": "tour",
+      "title": "Trip-a-Deal Day 16 - Tour finishes",
+      "description": "Trip-a-Deal tour concludes in Zagreb.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": "2026-05-21T09:30:00+02:00",
+      "endLocal": "2026-05-21T10:00:00+02:00",
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 16
+      },
+      "distanceKm": null,
+      "notes": [
+        "Trip-a-Deal tour officially ends."
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Zagreb, Croatia",
+          "lat": 45.8150108,
+          "lon": 15.981919
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "End of Trip-a-Deal package"
+      }
+    },
+    {
+      "type": "accommodation",
+      "title": "Pullman Zagreb (self - 2 nights)",
+      "description": "Egans’ independent stay in Zagreb after Trip-a-Deal.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": "2026-05-21T15:00:00+02:00",
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 18
+      },
+      "distanceKm": null,
+      "notes": [
+        "Non Trip-a-Deal accommodation"
+      ],
+      "bookingRefs": [],
+      "confirmation": "5461730525",
+      "website": "https://all.accor.com/lien_externe.svt?goto=fiche_hotel&code_hotel=C030",
+      "phone": "+385 1 8880 908",
+      "address": "Buzinski Krci 3A Buzin, 10010 Zagreb, Croatia",
+      "locations": [
+        {
+          "name": "Zagreb, Croatia",
+          "lat": 45.8150108,
+          "lon": 15.981919
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": "2026-05-21",
+        "local": {
+          "amount": 619.44,
+          "currency": "EUR"
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": null
+        },
+        "notes": "Egans independent accommodation - 2 rooms"
+      }
+    },
+    {
+      "type": "free-day",
+      "title": "Zagreb free day",
+      "description": "Independent free day in Zagreb after Trip-a-Deal tour completed.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": "2026-05-22T09:00:00+02:00",
+      "endLocal": "2026-05-22T23:00:00+02:00",
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 19
+      },
+      "distanceKm": null,
+      "notes": [
+        "Need to examine options for wine tours and similar."
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Zagreb, Croatia",
+          "lat": 45.8150108,
+          "lon": 15.981919
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": null
+        },
+        "notes": null
+      }
+    },
+    {
+      "type": "accommodation",
+      "title": "Pullman Zagreb (self - 2 nights)",
+      "description": "Check-out from Egans’ independent stay in Zagreb.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": null,
+      "checkOutLocal": "2026-05-23T10:00:00+02:00",
+      "provider": {
+        "name": null,
+        "dayNumber": 20
+      },
+      "distanceKm": null,
+      "notes": [
+        "Non Trip-a-Deal accommodation"
+      ],
+      "bookingRefs": [],
+      "confirmation": "5461730525",
+      "website": "https://all.accor.com/lien_externe.svt?goto=fiche_hotel&code_hotel=C030",
+      "phone": "+385 1 8880 908",
+      "address": "Buzinski Krci 3A Buzin, 10010 Zagreb, Croatia",
+      "locations": [
+        {
+          "name": "Zagreb, Croatia",
+          "lat": 45.8150108,
+          "lon": 15.981919
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": "2026-05-23",
+        "local": {
+          "amount": 0,
+          "currency": "EUR"
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Stay completed"
+      }
+    },
+    {
+      "type": "transport",
+      "title": "FlixBus - Zagreb to Budapest Kelenföld",
+      "description": "FlixBus from Autobusni Kolodvor Zagreb to Budapest Kelenföld Bus station.",
+      "from": "Autobusni Kolodvor Zagreb",
+      "to": "Budapest Kelenföld Bus station",
+      "departLocal": "2026-05-23T11:05:00+02:00",
+      "arriveLocal": "2026-05-23T15:00:00+02:00",
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 20
+      },
+      "distanceKm": null,
+      "notes": [
+        "Flix bus (bright green) likely departing from platform 603.",
+        "Booking #3327839148 for 4 passengers."
+      ],
+      "bookingRefs": [
+        "3327839148"
+      ],
+      "confirmation": "3327839148",
+      "website": null,
+      "phone": null,
+      "address": "Autobusni Kolodvor Zagreb, Avenija Marina Držića 4, 10000 Zagreb, Croatia",
+      "locations": [
+        {
+          "name": "Budapest, Hungary",
+          "lat": 47.497912,
+          "lon": 19.040235
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": null
+        },
+        "notes": "FlixBus booking"
+      }
+    },
+    {
+      "type": "accommodation",
+      "title": "Mamaison Vibe Hotel Downtown (self - 4 nights)",
+      "description": "Egans and Schots stay in central Budapest (4 nights).",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": "2026-05-23T16:00:00+02:00",
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 20
+      },
+      "distanceKm": null,
+      "notes": [
+        "Luggage storage room available for temporary storage until departure to airport."
+      ],
+      "bookingRefs": [],
+      "confirmation": "4382759",
+      "website": "https://www.mamaisonvibehoteldowntown.com/en/",
+      "phone": "+36 70 526 4343",
+      "address": "Mérleg utca 4, 1051 Budapest, Hungary",
+      "locations": [
+        {
+          "name": "Budapest, Hungary",
+          "lat": 47.497912,
+          "lon": 19.040235
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": "2026-05-23",
+        "local": {
+          "amount": 677,
+          "currency": "EUR"
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": null
+        },
+        "notes": "4 × €169 Cozy Room; breakfast conditions per booking"
+      }
+    },
+    {
+      "type": "free-day",
+      "title": "Budapest free day",
+      "description": "Independent free day in Budapest.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": "2026-05-24T00:00:00+02:00",
+      "endLocal": "2026-05-24T23:59:00+02:00",
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 21
+      },
+      "distanceKm": null,
+      "notes": [],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Budapest, Hungary",
+          "lat": 47.497912,
+          "lon": 19.040235
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": null
+        },
+        "notes": null
+      }
+    },
+    {
+      "type": "activity",
+      "title": "Tour to Lake Balaton, Hungary",
+      "description": "Day trip to Lake Balaton by public transport or private tour with lakeside lunch (to be decided).",
+      "from": "Budapest, Hungary",
+      "to": "Lake Balaton, Hungary",
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": "2026-05-25T07:00:00+02:00",
+      "endLocal": "2026-05-25T19:00:00+02:00",
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 22
+      },
+      "distanceKm": null,
+      "notes": [
+        "Public train or bus or private tour - to be decided with lakeside lunch."
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Balatonfured, Hungary",
+          "lat": 46.9599039,
+          "lon": 17.8851202
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": null
+        },
+        "notes": [
+          "Lake Balaton"
+        ]
+      }
+    },
+    {
+      "type": "free-day",
+      "title": "Budapest free day",
+      "description": "Independent free day in Budapest.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": "2026-05-26T00:00:00+02:00",
+      "endLocal": "2026-05-26T23:59:00+02:00",
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 23
+      },
+      "distanceKm": null,
+      "notes": [
+        "Schots depart Budapest for home this evening (separate flights)."
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Budapest, Hungary",
+          "lat": 47.497912,
+          "lon": 19.040235
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": null
+        },
+        "notes": null
+      }
+    },
+    {
+      "type": "note",
+      "title": "Schots depart Budapest",
+      "description": "Departure of Neville & Heather from Budapest.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": "2026-05-26T20:30:00+02:00",
+      "endLocal": null,
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 26
+      },
+      "distanceKm": null,
+      "notes": [
+        "Flight TK1030 BUD → IST → KUL → MEL"
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Budapest, Hungary",
+          "lat": 47.497912,
+          "lon": 19.040235
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": null
+        },
+        "notes": null
+      }
+    },
+    {
+      "type": "accommodation",
+      "title": "Mamaison Vibe Hotel Downtown (self - 4 nights)",
+      "description": "Check-out from Budapest hotel.",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": null,
+      "checkOutLocal": "2026-05-27T12:00:00+02:00",
+      "provider": {
+        "name": null,
+        "dayNumber": 24
+      },
+      "distanceKm": null,
+      "notes": [
+        "Luggage storage room available until departure to airport."
+      ],
+      "bookingRefs": [],
+      "confirmation": "4382759",
+      "website": "https://www.mamaisonvibehoteldowntown.com/en/",
+      "phone": "+36 70 526 4343",
+      "address": "Mérleg utca 4, 1051 Budapest, Hungary",
+      "locations": [
+        {
+          "name": "Budapest, Hungary",
+          "lat": 47.497912,
+          "lon": 19.040235
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": "2026-05-27",
+        "local": {
+          "amount": 0,
+          "currency": "EUR"
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": "Stay completed"
+      }
+    },
+    {
+      "type": "flight",
+      "title": "TK1038 BUD → IST",
+      "description": "Turkish Airlines 1038 - BUD to IST. Duration 2h10m. Airbus A321.",
+      "from": "Budapest (BUD)",
+      "to": "Istanbul (IST)",
+      "departLocal": "2026-05-27T20:30:00+02:00",
+      "arriveLocal": "2026-05-27T23:40:00+03:00",
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 24
+      },
+      "distanceKm": 1017,
+      "notes": [],
+      "bookingRefs": [
+        "XQDJWT",
+        "R3JNQ5",
+        "E8YSZM"
+      ],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Budapest, Hungary → Istanbul, Türkiye",
+          "lat": 41.0082376,
+          "lon": 28.9783589
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": null
+        },
+        "notes": "Total Cost Egans itinerary"
+      },
+      "flight": {
+        "flightNumber": "TK1038",
+        "origin": "Budapest (BUD)",
+        "destination": "Istanbul (IST)",
+        "airline": "Turkish"
+      }
+    },
+    {
+      "type": "layover",
+      "title": "Layover - Istanbul (IST)",
+      "description": "2h15m layover in Istanbul between BUD → IST and IST → SIN.",
+      "from": "Istanbul (IST)",
+      "to": "Istanbul (IST)",
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": "2026-05-27T23:40:00+03:00",
+      "endLocal": "2026-05-28T01:55:00+03:00",
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 25
+      },
+      "distanceKm": null,
+      "notes": [
+        "2 hours, 15 minutes layover in Istanbul."
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Istanbul, Türkiye",
+          "lat": 41.0082376,
+          "lon": 28.9783589
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": null
+        },
+        "notes": null
+      }
+    },
+    {
+      "type": "flight",
+      "title": "TK54 IST → SIN",
+      "description": "Turkish Airlines 54 - IST to SIN. Duration 11h. Boeing 787-9.",
+      "from": "Istanbul (IST)",
+      "to": "Singapore (SIN)",
+      "departLocal": "2026-05-28T01:55:00+03:00",
+      "arriveLocal": "2026-05-28T17:55:00+08:00",
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 25
+      },
+      "distanceKm": 8674,
+      "notes": [],
+      "bookingRefs": [
+        "XQDJWT",
+        "R3JNQ5",
+        "E8YSZM"
+      ],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Istanbul, Türkiye → Singapore",
+          "lat": 41.0082376,
+          "lon": 28.9783589
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": null
+        },
+        "notes": "Total Cost Egans itinerary"
+      },
+      "flight": {
+        "flightNumber": "TK54",
+        "origin": "Istanbul (IST)",
+        "destination": "Singapore (SIN)",
+        "airline": "Turkish"
+      }
+    },
+    {
+      "type": "layover",
+      "title": "Layover - Singapore (SIN)",
+      "description": "3h05m layover in Singapore between IST → SIN and SIN → MEL.",
+      "from": "Singapore (SIN)",
+      "to": "Singapore (SIN)",
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": "2026-05-28T17:55:00+08:00",
+      "endLocal": "2026-05-28T21:00:00+08:00",
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 25
+      },
+      "distanceKm": null,
+      "notes": [
+        "3 hours, 5 minutes layover in Singapore."
+      ],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Singapore",
+          "lat": 1.352083,
+          "lon": 103.819836
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": null
+        },
+        "notes": null
+      }
+    },
+    {
+      "type": "flight",
+      "title": "JQ8 SIN → MEL",
+      "description": "Jetstar 8 - SIN to MEL. Duration 7h15m. Boeing 787-8.",
+      "from": "Singapore (SIN)",
+      "to": "Melbourne (MEL)",
+      "departLocal": "2026-05-28T21:00:00+08:00",
+      "arriveLocal": "2026-05-29T06:15:00+10:00",
+      "startLocal": null,
+      "endLocal": null,
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 26
+      },
+      "distanceKm": 6030,
+      "notes": [],
+      "bookingRefs": [
+        "XQDJWT",
+        "R3JNQ5",
+        "E8YSZM"
+      ],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Singapore → Melbourne, Australia",
+          "lat": -37.8136276,
+          "lon": 144.9630576
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": null
+        },
+        "notes": "Total Cost Egans itinerary"
+      },
+      "flight": {
+        "flightNumber": "JQ8",
+        "origin": "Singapore (SIN)",
+        "destination": "Melbourne (MEL)",
+        "airline": "Jetstar"
+      }
+    }
+  ]
+}

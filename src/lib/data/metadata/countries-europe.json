@@ -1,0 +1,2217 @@
+[
+  {
+    "code": "IS",
+    "name": "Iceland",
+    "capital": "Reykjavík",
+    "region": "Northern Europe",
+    "subregion": "Nordic",
+    "euMember": false,
+    "schengenMember": true,
+    "currency": {
+      "code": "ISK",
+      "name": "Icelandic Króna",
+      "symbol": "kr",
+      "fxToAUD": 87.72,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:28 am"
+    },
+    "languages": [
+      {
+        "name": "Icelandic",
+        "native": "Íslenska"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Atlantic/Reykjavik",
+        "utcOffset": "+00:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇮🇸"
+  },
+  {
+    "code": "NO",
+    "name": "Norway",
+    "capital": "Oslo",
+    "region": "Northern Europe",
+    "subregion": "Nordic",
+    "euMember": false,
+    "schengenMember": true,
+    "currency": {
+      "code": "NOK",
+      "name": "Norwegian Krone",
+      "symbol": "kr",
+      "fxToAUD": 6.6812,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:29 am"
+    },
+    "languages": [
+      {
+        "name": "Norwegian",
+        "native": "Norsk"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Oslo",
+        "utcOffset": "+01:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇳🇴"
+  },
+  {
+    "code": "SE",
+    "name": "Sweden",
+    "capital": "Stockholm",
+    "region": "Northern Europe",
+    "subregion": "Nordic",
+    "euMember": true,
+    "schengenMember": true,
+    "currency": {
+      "code": "SEK",
+      "name": "Swedish Krona",
+      "symbol": "kr",
+      "fxToAUD": 6.6004,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:29 am"
+    },
+    "languages": [
+      {
+        "name": "Swedish",
+        "native": "Svenska"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Stockholm",
+        "utcOffset": "+01:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇸🇪"
+  },
+  {
+    "code": "FI",
+    "name": "Finland",
+    "capital": "Helsinki",
+    "region": "Northern Europe",
+    "subregion": "Nordic",
+    "euMember": true,
+    "schengenMember": true,
+    "currency": {
+      "code": "EUR",
+      "name": "Euro",
+      "symbol": "€",
+      "fxToAUD": 0.61002,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:29 am"
+    },
+    "languages": [
+      {
+        "name": "Finnish",
+        "native": "Suomi"
+      },
+      {
+        "name": "Swedish",
+        "native": "Svenska"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Helsinki",
+        "utcOffset": "+02:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇫🇮"
+  },
+  {
+    "code": "DK",
+    "name": "Denmark",
+    "capital": "Copenhagen",
+    "region": "Northern Europe",
+    "subregion": "Nordic",
+    "euMember": true,
+    "schengenMember": true,
+    "currency": {
+      "code": "DKK",
+      "name": "Danish Krone",
+      "symbol": "kr",
+      "fxToAUD": 4.5587,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:29 am"
+    },
+    "languages": [
+      {
+        "name": "Danish",
+        "native": "Dansk"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Copenhagen",
+        "utcOffset": "+01:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇩🇰"
+  },
+  {
+    "code": "EE",
+    "name": "Estonia",
+    "capital": "Tallinn",
+    "region": "Northern Europe",
+    "subregion": "Baltic",
+    "euMember": true,
+    "schengenMember": true,
+    "currency": {
+      "code": "EUR",
+      "name": "Euro",
+      "symbol": "€",
+      "fxToAUD": 0.61002,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:29 am"
+    },
+    "languages": [
+      {
+        "name": "Estonian",
+        "native": "Eesti"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Tallinn",
+        "utcOffset": "+02:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇪🇪"
+  },
+  {
+    "code": "LV",
+    "name": "Latvia",
+    "capital": "Riga",
+    "region": "Northern Europe",
+    "subregion": "Baltic",
+    "euMember": true,
+    "schengenMember": true,
+    "currency": {
+      "code": "EUR",
+      "name": "Euro",
+      "symbol": "€",
+      "fxToAUD": 0.61002,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:29 am"
+    },
+    "languages": [
+      {
+        "name": "Latvian",
+        "native": "Latviešu"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Riga",
+        "utcOffset": "+02:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇱🇻"
+  },
+  {
+    "code": "LT",
+    "name": "Lithuania",
+    "capital": "Vilnius",
+    "region": "Northern Europe",
+    "subregion": "Baltic",
+    "euMember": true,
+    "schengenMember": true,
+    "currency": {
+      "code": "EUR",
+      "name": "Euro",
+      "symbol": "€",
+      "fxToAUD": 0.61002,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:29 am"
+    },
+    "languages": [
+      {
+        "name": "Lithuanian",
+        "native": "Lietuvių"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Vilnius",
+        "utcOffset": "+02:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇱🇹"
+  },
+  {
+    "code": "IE",
+    "name": "Ireland",
+    "capital": "Dublin",
+    "region": "Northern Europe",
+    "subregion": "British Isles",
+    "euMember": true,
+    "schengenMember": false,
+    "currency": {
+      "code": "EUR",
+      "name": "Euro",
+      "symbol": "€",
+      "fxToAUD": 0.61002,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:29 am"
+    },
+    "languages": [
+      {
+        "name": "English",
+        "native": "English"
+      },
+      {
+        "name": "Irish",
+        "native": "Gaeilge"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Dublin",
+        "utcOffset": "+00:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "G",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇮🇪"
+  },
+  {
+    "code": "GB",
+    "name": "United Kingdom",
+    "capital": "London",
+    "region": "Northern Europe",
+    "subregion": "British Isles",
+    "euMember": false,
+    "schengenMember": false,
+    "currency": {
+      "code": "GBP",
+      "name": "Pound Sterling",
+      "symbol": "£",
+      "fxToAUD": 0.52951,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:30 am"
+    },
+    "languages": [
+      {
+        "name": "English",
+        "native": "English"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/London",
+        "utcOffset": "+00:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "G",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇬🇧"
+  },
+  {
+    "code": "FR",
+    "name": "France",
+    "capital": "Paris",
+    "region": "Western Europe",
+    "subregion": "Western Europe",
+    "euMember": true,
+    "schengenMember": true,
+    "currency": {
+      "code": "EUR",
+      "name": "Euro",
+      "symbol": "€",
+      "fxToAUD": 0.61002,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:30 am"
+    },
+    "languages": [
+      {
+        "name": "French",
+        "native": "Français"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Paris",
+        "utcOffset": "+01:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "E",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇫🇷"
+  },
+  {
+    "code": "BE",
+    "name": "Belgium",
+    "capital": "Brussels",
+    "region": "Western Europe",
+    "subregion": "Western Europe",
+    "euMember": true,
+    "schengenMember": true,
+    "currency": {
+      "code": "EUR",
+      "name": "Euro",
+      "symbol": "€",
+      "fxToAUD": 0.61002,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:30 am"
+    },
+    "languages": [
+      {
+        "name": "Dutch",
+        "native": "Nederlands"
+      },
+      {
+        "name": "French",
+        "native": "Français"
+      },
+      {
+        "name": "German",
+        "native": "Deutsch"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Brussels",
+        "utcOffset": "+01:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "E",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇧🇪"
+  },
+  {
+    "code": "NL",
+    "name": "Netherlands",
+    "capital": "Amsterdam",
+    "region": "Western Europe",
+    "subregion": "Western Europe",
+    "euMember": true,
+    "schengenMember": true,
+    "currency": {
+      "code": "EUR",
+      "name": "Euro",
+      "symbol": "€",
+      "fxToAUD": 0.61002,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:30 am"
+    },
+    "languages": [
+      {
+        "name": "Dutch",
+        "native": "Nederlands"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Amsterdam",
+        "utcOffset": "+01:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇳🇱"
+  },
+  {
+    "code": "LU",
+    "name": "Luxembourg",
+    "capital": "Luxembourg City",
+    "region": "Western Europe",
+    "subregion": "Western Europe",
+    "euMember": true,
+    "schengenMember": true,
+    "currency": {
+      "code": "EUR",
+      "name": "Euro",
+      "symbol": "€",
+      "fxToAUD": 0.61002,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:30 am"
+    },
+    "languages": [
+      {
+        "name": "Luxembourgish",
+        "native": "Lëtzebuergesch"
+      },
+      {
+        "name": "French",
+        "native": "Français"
+      },
+      {
+        "name": "German",
+        "native": "Deutsch"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Luxembourg",
+        "utcOffset": "+01:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇱🇺"
+  },
+  {
+    "code": "DE",
+    "name": "Germany",
+    "capital": "Berlin",
+    "region": "Western Europe",
+    "subregion": "Central Europe",
+    "euMember": true,
+    "schengenMember": true,
+    "currency": {
+      "code": "EUR",
+      "name": "Euro",
+      "symbol": "€",
+      "fxToAUD": 0.61002,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:30 am"
+    },
+    "languages": [
+      {
+        "name": "German",
+        "native": "Deutsch"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Berlin",
+        "utcOffset": "+01:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇩🇪"
+  },
+  {
+    "code": "AT",
+    "name": "Austria",
+    "capital": "Vienna",
+    "region": "Western Europe",
+    "subregion": "Central Europe",
+    "euMember": true,
+    "schengenMember": true,
+    "currency": {
+      "code": "EUR",
+      "name": "Euro",
+      "symbol": "€",
+      "fxToAUD": 0.61002,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:30 am"
+    },
+    "languages": [
+      {
+        "name": "German",
+        "native": "Deutsch"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Vienna",
+        "utcOffset": "+01:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇦🇹"
+  },
+  {
+    "code": "CH",
+    "name": "Switzerland",
+    "capital": "Bern",
+    "region": "Western Europe",
+    "subregion": "Central Europe",
+    "euMember": false,
+    "schengenMember": true,
+    "currency": {
+      "code": "CHF",
+      "name": "Swiss Franc",
+      "symbol": "CHF",
+      "fxToAUD": 0.56115,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:30 am"
+    },
+    "languages": [
+      {
+        "name": "German",
+        "native": "Deutsch"
+      },
+      {
+        "name": "French",
+        "native": "Français"
+      },
+      {
+        "name": "Italian",
+        "native": "Italiano"
+      },
+      {
+        "name": "Romansh",
+        "native": "Rumantsch"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Zurich",
+        "utcOffset": "+01:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "J",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇨🇭"
+  },
+  {
+    "code": "LI",
+    "name": "Liechtenstein",
+    "capital": "Vaduz",
+    "region": "Western Europe",
+    "subregion": "Central Europe",
+    "euMember": false,
+    "schengenMember": true,
+    "currency": {
+      "code": "CHF",
+      "name": "Swiss Franc",
+      "symbol": "CHF",
+      "fxToAUD": 0.56115,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:30 am"
+    },
+    "languages": [
+      {
+        "name": "German",
+        "native": "Deutsch"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Vaduz",
+        "utcOffset": "+01:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "J",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇱🇮"
+  },
+  {
+    "code": "MC",
+    "name": "Monaco",
+    "capital": "Monaco",
+    "region": "Western Europe",
+    "subregion": "Western Europe",
+    "euMember": false,
+    "schengenMember": false,
+    "currency": {
+      "code": "EUR",
+      "name": "Euro",
+      "symbol": "€",
+      "fxToAUD": 0.61002,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:30 am"
+    },
+    "languages": [
+      {
+        "name": "French",
+        "native": "Français"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Monaco",
+        "utcOffset": "+01:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "E",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇲🇨"
+  },
+  {
+    "code": "PT",
+    "name": "Portugal",
+    "capital": "Lisbon",
+    "region": "Southern Europe",
+    "subregion": "Iberian Peninsula",
+    "euMember": true,
+    "schengenMember": true,
+    "currency": {
+      "code": "EUR",
+      "name": "Euro",
+      "symbol": "€",
+      "fxToAUD": 0.61002,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:30 am"
+    },
+    "languages": [
+      {
+        "name": "Portuguese",
+        "native": "Português"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Lisbon",
+        "utcOffset": "+00:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇵🇹"
+  },
+  {
+    "code": "ES",
+    "name": "Spain",
+    "capital": "Madrid",
+    "region": "Southern Europe",
+    "subregion": "Iberian Peninsula",
+    "euMember": true,
+    "schengenMember": true,
+    "currency": {
+      "code": "EUR",
+      "name": "Euro",
+      "symbol": "€",
+      "fxToAUD": 0.61002,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:30 am"
+    },
+    "languages": [
+      {
+        "name": "Spanish",
+        "native": "Español"
+      },
+      {
+        "name": "Catalan",
+        "native": "Català"
+      },
+      {
+        "name": "Basque",
+        "native": "Euskara"
+      },
+      {
+        "name": "Galician",
+        "native": "Galego"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Madrid",
+        "utcOffset": "+01:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇪🇸"
+  },
+  {
+    "code": "IT",
+    "name": "Italy",
+    "capital": "Rome",
+    "region": "Southern Europe",
+    "subregion": "Mediterranean",
+    "euMember": true,
+    "schengenMember": true,
+    "currency": {
+      "code": "EUR",
+      "name": "Euro",
+      "symbol": "€",
+      "fxToAUD": 0.61002,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:30 am"
+    },
+    "languages": [
+      {
+        "name": "Italian",
+        "native": "Italiano"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Rome",
+        "utcOffset": "+01:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇮🇹"
+  },
+  {
+    "code": "MT",
+    "name": "Malta",
+    "capital": "Valletta",
+    "region": "Southern Europe",
+    "subregion": "Mediterranean",
+    "euMember": true,
+    "schengenMember": false,
+    "currency": {
+      "code": "EUR",
+      "name": "Euro",
+      "symbol": "€",
+      "fxToAUD": 0.61002,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:30 am"
+    },
+    "languages": [
+      {
+        "name": "Maltese",
+        "native": "Malti"
+      },
+      {
+        "name": "English",
+        "native": "English"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Malta",
+        "utcOffset": "+01:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "G",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇲🇹"
+  },
+  {
+    "code": "GR",
+    "name": "Greece",
+    "capital": "Athens",
+    "region": "Southern Europe",
+    "subregion": "Mediterranean",
+    "euMember": true,
+    "schengenMember": true,
+    "currency": {
+      "code": "EUR",
+      "name": "Euro",
+      "symbol": "€",
+      "fxToAUD": 0.61002,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:30 am"
+    },
+    "languages": [
+      {
+        "name": "Greek",
+        "native": "Ελληνικά"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Athens",
+        "utcOffset": "+02:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇬🇷"
+  },
+  {
+    "code": "AD",
+    "name": "Andorra",
+    "capital": "Andorra la Vella",
+    "region": "Southern Europe",
+    "subregion": "Pyrenees",
+    "euMember": false,
+    "schengenMember": false,
+    "currency": {
+      "code": "EUR",
+      "name": "Euro",
+      "symbol": "€",
+      "fxToAUD": 0.61002,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:30 am"
+    },
+    "languages": [
+      {
+        "name": "Catalan",
+        "native": "Català"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Andorra",
+        "utcOffset": "+01:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇦🇩"
+  },
+  {
+    "code": "SM",
+    "name": "San Marino",
+    "capital": "San Marino",
+    "region": "Southern Europe",
+    "subregion": "Mediterranean",
+    "euMember": false,
+    "schengenMember": false,
+    "currency": {
+      "code": "EUR",
+      "name": "Euro",
+      "symbol": "€",
+      "fxToAUD": 0.61002,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:30 am"
+    },
+    "languages": [
+      {
+        "name": "Italian",
+        "native": "Italiano"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/San_Marino",
+        "utcOffset": "+01:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇸🇲"
+  },
+  {
+    "code": "VA",
+    "name": "Vatican City",
+    "capital": "Vatican City",
+    "region": "Southern Europe",
+    "subregion": "Mediterranean",
+    "euMember": false,
+    "schengenMember": false,
+    "currency": {
+      "code": "EUR",
+      "name": "Euro",
+      "symbol": "€",
+      "fxToAUD": 0.61002,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:30 am"
+    },
+    "languages": [
+      {
+        "name": "Italian",
+        "native": "Italiano"
+      },
+      {
+        "name": "Latin",
+        "native": "Latina"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Vatican",
+        "utcOffset": "+01:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇻🇦"
+  },
+  {
+    "code": "PL",
+    "name": "Poland",
+    "capital": "Warsaw",
+    "region": "Eastern Europe",
+    "subregion": "Central Europe",
+    "euMember": true,
+    "schengenMember": true,
+    "currency": {
+      "code": "PLN",
+      "name": "Polish Złoty",
+      "symbol": "zł",
+      "fxToAUD": 2.5867,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:30 am"
+    },
+    "languages": [
+      {
+        "name": "Polish",
+        "native": "Polski"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Warsaw",
+        "utcOffset": "+01:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "E",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇵🇱"
+  },
+  {
+    "code": "CZ",
+    "name": "Czechia",
+    "capital": "Prague",
+    "region": "Eastern Europe",
+    "subregion": "Central Europe",
+    "euMember": true,
+    "schengenMember": true,
+    "currency": {
+      "code": "CZK",
+      "name": "Czech Koruna",
+      "symbol": "Kč",
+      "fxToAUD": 14.8679,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:30 am"
+    },
+    "languages": [
+      {
+        "name": "Czech",
+        "native": "Čeština"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Prague",
+        "utcOffset": "+01:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "E",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇨🇿"
+  },
+  {
+    "code": "SK",
+    "name": "Slovakia",
+    "capital": "Bratislava",
+    "region": "Eastern Europe",
+    "subregion": "Central Europe",
+    "euMember": true,
+    "schengenMember": true,
+    "currency": {
+      "code": "EUR",
+      "name": "Euro",
+      "symbol": "€",
+      "fxToAUD": 0.61002,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:30 am"
+    },
+    "languages": [
+      {
+        "name": "Slovak",
+        "native": "Slovenčina"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Bratislava",
+        "utcOffset": "+01:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇸🇰"
+  },
+  {
+    "code": "HU",
+    "name": "Hungary",
+    "capital": "Budapest",
+    "region": "Eastern Europe",
+    "subregion": "Central Europe",
+    "euMember": true,
+    "schengenMember": true,
+    "currency": {
+      "code": "HUF",
+      "name": "Hungarian Forint",
+      "symbol": "Ft",
+      "fxToAUD": 222.96,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:30 am"
+    },
+    "languages": [
+      {
+        "name": "Hungarian",
+        "native": "Magyar"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Budapest",
+        "utcOffset": "+01:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇭🇺"
+  },
+  {
+    "code": "RO",
+    "name": "Romania",
+    "capital": "Bucharest",
+    "region": "Eastern Europe",
+    "subregion": "Balkans",
+    "euMember": true,
+    "schengenMember": false,
+    "currency": {
+      "code": "RON",
+      "name": "Romanian Leu",
+      "symbol": "lei",
+      "fxToAUD": 3.1059,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:30 am"
+    },
+    "languages": [
+      {
+        "name": "Romanian",
+        "native": "Română"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Bucharest",
+        "utcOffset": "+02:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇷🇴"
+  },
+  {
+    "code": "BG",
+    "name": "Bulgaria",
+    "capital": "Sofia",
+    "region": "Eastern Europe",
+    "subregion": "Balkans",
+    "euMember": true,
+    "schengenMember": false,
+    "currency": {
+      "code": "BGN",
+      "name": "Bulgarian Lev",
+      "symbol": "лв",
+      "fxToAUD": 1.193505,
+      "fxSource": "open.er-api.com",
+      "fxDate": "26/04/2026, 8:44:30 am"
+    },
+    "languages": [
+      {
+        "name": "Bulgarian",
+        "native": "Български"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Sofia",
+        "utcOffset": "+02:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇧🇬"
+  },
+  {
+    "code": "MD",
+    "name": "Moldova",
+    "capital": "Chișinău",
+    "region": "Eastern Europe",
+    "subregion": "Eastern Europe",
+    "euMember": false,
+    "schengenMember": false,
+    "currency": {
+      "code": "MDL",
+      "name": "Moldovan Leu",
+      "symbol": "L",
+      "fxToAUD": 12.357875,
+      "fxSource": "open.er-api.com",
+      "fxDate": "26/04/2026, 8:44:30 am"
+    },
+    "languages": [
+      {
+        "name": "Romanian",
+        "native": "Română"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Chisinau",
+        "utcOffset": "+02:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇲🇩"
+  },
+  {
+    "code": "UA",
+    "name": "Ukraine",
+    "capital": "Kyiv",
+    "region": "Eastern Europe",
+    "subregion": "Eastern Europe",
+    "euMember": false,
+    "schengenMember": false,
+    "currency": {
+      "code": "UAH",
+      "name": "Ukrainian Hryvnia",
+      "symbol": "₴",
+      "fxToAUD": 31.417839,
+      "fxSource": "open.er-api.com",
+      "fxDate": "26/04/2026, 8:44:31 am"
+    },
+    "languages": [
+      {
+        "name": "Ukrainian",
+        "native": "Українська"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Kyiv",
+        "utcOffset": "+02:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇺🇦"
+  },
+  {
+    "code": "BY",
+    "name": "Belarus",
+    "capital": "Minsk",
+    "region": "Eastern Europe",
+    "subregion": "Eastern Europe",
+    "euMember": false,
+    "schengenMember": false,
+    "currency": {
+      "code": "BYN",
+      "name": "Belarusian Ruble",
+      "symbol": "Br",
+      "fxToAUD": 2.014685,
+      "fxSource": "open.er-api.com",
+      "fxDate": "26/04/2026, 8:44:31 am"
+    },
+    "languages": [
+      {
+        "name": "Belarusian",
+        "native": "Беларуская"
+      },
+      {
+        "name": "Russian",
+        "native": "Русский"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Minsk",
+        "utcOffset": "+03:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇧🇾"
+  },
+  {
+    "code": "TR",
+    "name": "Türkiye",
+    "capital": "Ankara",
+    "region": "Transcontinental",
+    "subregion": "Anatolia / Thrace",
+    "euMember": false,
+    "schengenMember": false,
+    "currency": {
+      "code": "TRY",
+      "name": "Turkish Lira",
+      "symbol": "₺",
+      "fxToAUD": 32.167,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:31 am"
+    },
+    "languages": [
+      {
+        "name": "Turkish",
+        "native": "Türkçe"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Istanbul",
+        "utcOffset": "+03:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇹🇷"
+  },
+  {
+    "code": "RU",
+    "name": "Russia",
+    "capital": "Moscow",
+    "region": "Transcontinental",
+    "subregion": "Eastern Europe / Northern Asia",
+    "euMember": false,
+    "schengenMember": false,
+    "currency": {
+      "code": "RUB",
+      "name": "Russian Ruble",
+      "symbol": "₽",
+      "fxToAUD": 53.794082,
+      "fxSource": "open.er-api.com",
+      "fxDate": "26/04/2026, 8:44:31 am"
+    },
+    "languages": [
+      {
+        "name": "Russian",
+        "native": "Русский"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Kaliningrad",
+        "utcOffset": "+02:00"
+      },
+      {
+        "name": "Europe/Moscow",
+        "utcOffset": "+03:00"
+      },
+      {
+        "name": "Europe/Samara",
+        "utcOffset": "+04:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 220,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 220,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇷🇺"
+  },
+  {
+    "code": "GE",
+    "name": "Georgia",
+    "capital": "Tbilisi",
+    "region": "Transcontinental",
+    "subregion": "Caucasus",
+    "euMember": false,
+    "schengenMember": false,
+    "currency": {
+      "code": "GEL",
+      "name": "Georgian Lari",
+      "symbol": "₾",
+      "fxToAUD": 1.921416,
+      "fxSource": "open.er-api.com",
+      "fxDate": "26/04/2026, 8:44:31 am"
+    },
+    "languages": [
+      {
+        "name": "Georgian",
+        "native": "ქართული"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Asia/Tbilisi",
+        "utcOffset": "+04:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 220,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 220,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇬🇪"
+  },
+  {
+    "code": "AM",
+    "name": "Armenia",
+    "capital": "Yerevan",
+    "region": "Transcontinental",
+    "subregion": "Caucasus",
+    "euMember": false,
+    "schengenMember": false,
+    "currency": {
+      "code": "AMD",
+      "name": "Armenian Dram",
+      "symbol": "֏",
+      "fxToAUD": 265.649223,
+      "fxSource": "open.er-api.com",
+      "fxDate": "26/04/2026, 8:44:31 am"
+    },
+    "languages": [
+      {
+        "name": "Armenian",
+        "native": "Հայերեն"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Asia/Yerevan",
+        "utcOffset": "+04:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇦🇲"
+  },
+  {
+    "code": "AZ",
+    "name": "Azerbaijan",
+    "capital": "Baku",
+    "region": "Transcontinental",
+    "subregion": "Caucasus",
+    "euMember": false,
+    "schengenMember": false,
+    "currency": {
+      "code": "AZN",
+      "name": "Azerbaijani Manat",
+      "symbol": "₼",
+      "fxToAUD": 1.213933,
+      "fxSource": "open.er-api.com",
+      "fxDate": "26/04/2026, 8:44:31 am"
+    },
+    "languages": [
+      {
+        "name": "Azerbaijani",
+        "native": "Azərbaycan dili"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Asia/Baku",
+        "utcOffset": "+04:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 220,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 220,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇦🇿"
+  },
+  {
+    "code": "KZ",
+    "name": "Kazakhstan",
+    "capital": "Astana",
+    "region": "Transcontinental",
+    "subregion": "Central Asia / Europe (West)",
+    "euMember": false,
+    "schengenMember": false,
+    "currency": {
+      "code": "KZT",
+      "name": "Kazakhstani Tenge",
+      "symbol": "₸",
+      "fxToAUD": 331.826878,
+      "fxSource": "open.er-api.com",
+      "fxDate": "26/04/2026, 8:44:31 am"
+    },
+    "languages": [
+      {
+        "name": "Kazakh",
+        "native": "Қазақ тілі"
+      },
+      {
+        "name": "Russian",
+        "native": "Русский"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Atyrau",
+        "utcOffset": "+05:00"
+      },
+      {
+        "name": "Europe/Oral",
+        "utcOffset": "+05:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 220,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 220,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇰🇿"
+  },
+  {
+    "code": "CY",
+    "name": "Cyprus",
+    "capital": "Nicosia",
+    "region": "Transcontinental",
+    "subregion": "Mediterranean",
+    "euMember": true,
+    "schengenMember": false,
+    "currency": {
+      "code": "EUR",
+      "name": "Euro",
+      "symbol": "€",
+      "fxToAUD": 0.61002,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:31 am"
+    },
+    "languages": [
+      {
+        "name": "Greek",
+        "native": "Ελληνικά"
+      },
+      {
+        "name": "Turkish",
+        "native": "Türkçe"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Asia/Nicosia",
+        "utcOffset": "+02:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "G",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇨🇾"
+  },
+  {
+    "code": "MK",
+    "name": "North Macedonia",
+    "capital": "Skopje",
+    "region": "Southern Europe",
+    "subregion": "Balkans",
+    "euMember": false,
+    "schengenMember": false,
+    "currency": {
+      "code": "MKD",
+      "name": "Macedonian Denar",
+      "symbol": "ден",
+      "fxToAUD": 37.7409,
+      "fxSource": "open.er-api.com",
+      "fxDate": "26/04/2026, 8:44:31 am"
+    },
+    "languages": [
+      {
+        "name": "Macedonian",
+        "native": "Македонски"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Skopje",
+        "utcOffset": "+01:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇲🇰"
+  },
+  {
+    "code": "AL",
+    "name": "Albania",
+    "capital": "Tirana",
+    "region": "Southern Europe",
+    "subregion": "Balkans",
+    "euMember": false,
+    "schengenMember": false,
+    "currency": {
+      "code": "ALL",
+      "name": "Albanian Lek",
+      "symbol": "L",
+      "fxToAUD": 58.381242,
+      "fxSource": "open.er-api.com",
+      "fxDate": "26/04/2026, 8:44:31 am"
+    },
+    "languages": [
+      {
+        "name": "Albanian",
+        "native": "Shqip"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Tirane",
+        "utcOffset": "+01:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇦🇱"
+  },
+  {
+    "code": "ME",
+    "name": "Montenegro",
+    "capital": "Podgorica",
+    "region": "Southern Europe",
+    "subregion": "Balkans",
+    "euMember": false,
+    "schengenMember": false,
+    "currency": {
+      "code": "EUR",
+      "name": "Euro",
+      "symbol": "€",
+      "fxToAUD": 0.61002,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:31 am"
+    },
+    "languages": [
+      {
+        "name": "Montenegrin",
+        "native": "Crnogorski"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Podgorica",
+        "utcOffset": "+01:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇲🇪"
+  },
+  {
+    "code": "HR",
+    "name": "Croatia",
+    "capital": "Zagreb",
+    "region": "Southern Europe",
+    "subregion": "Balkans",
+    "euMember": true,
+    "schengenMember": true,
+    "currency": {
+      "code": "EUR",
+      "name": "Euro",
+      "symbol": "€",
+      "fxToAUD": 0.61002,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:31 am"
+    },
+    "languages": [
+      {
+        "name": "Croatian",
+        "native": "Hrvatski"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Zagreb",
+        "utcOffset": "+01:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇭🇷"
+  },
+  {
+    "code": "BA",
+    "name": "Bosnia and Herzegovina",
+    "capital": "Sarajevo",
+    "region": "Southern Europe",
+    "subregion": "Balkans",
+    "euMember": false,
+    "schengenMember": false,
+    "currency": {
+      "code": "BAM",
+      "name": "Bosnia and Herzegovina Convertible Mark",
+      "symbol": "KM",
+      "fxToAUD": 1.193505,
+      "fxSource": "open.er-api.com",
+      "fxDate": "26/04/2026, 8:44:31 am"
+    },
+    "languages": [
+      {
+        "name": "Bosnian",
+        "native": "Bosanski"
+      },
+      {
+        "name": "Croatian",
+        "native": "Hrvatski"
+      },
+      {
+        "name": "Serbian",
+        "native": "Српски"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Sarajevo",
+        "utcOffset": "+01:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇧🇦"
+  },
+  {
+    "code": "SI",
+    "name": "Slovenia",
+    "capital": "Ljubljana",
+    "region": "Southern Europe",
+    "subregion": "Balkans",
+    "euMember": true,
+    "schengenMember": true,
+    "currency": {
+      "code": "EUR",
+      "name": "Euro",
+      "symbol": "€",
+      "fxToAUD": 0.61002,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:31 am"
+    },
+    "languages": [
+      {
+        "name": "Slovene",
+        "native": "Slovenščina"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Ljubljana",
+        "utcOffset": "+01:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇸🇮"
+  },
+  {
+    "code": "RS",
+    "name": "Serbia",
+    "capital": "Belgrade",
+    "region": "Southern Europe",
+    "subregion": "Balkans",
+    "euMember": false,
+    "schengenMember": false,
+    "currency": {
+      "code": "RSD",
+      "name": "Serbian Dinar",
+      "symbol": "дин",
+      "fxToAUD": 71.691529,
+      "fxSource": "open.er-api.com",
+      "fxDate": "26/04/2026, 8:44:31 am"
+    },
+    "languages": [
+      {
+        "name": "Serbian",
+        "native": "Српски"
+      }
+    ],
+    "timezones": [
+      {
+        "name": "Europe/Belgrade",
+        "utcOffset": "+01:00"
+      }
+    ],
+    "plugs": [
+      {
+        "type": "C",
+        "voltage": 230,
+        "frequency": 50
+      },
+      {
+        "type": "F",
+        "voltage": 230,
+        "frequency": 50
+      }
+    ],
+    "flagEmoji": "🇷🇸"
+  },
+  {
+  "code": "XK",
+  "name": "Kosovo",
+  "capital": "Pristina",
+  "region": "Southern Europe",
+  "subregion": "Balkans",
+  "euMember": false,
+  "schengenMember": false,
+  "currency": {
+    "code": "EUR",
+    "name": "Euro",
+    "symbol": "€",
+      "fxToAUD": 0.61002,
+      "fxSource": "frankfurter.app",
+      "fxDate": "26/04/2026, 8:44:31 am"
+  },
+  "languages": [
+    {
+      "name": "Albanian",
+      "native": "Shqip"
+    },
+    {
+      "name": "Serbian",
+      "native": "Српски"
+    }
+  ],
+  "timezones": [
+    {
+      "name": "Europe/Belgrade",
+      "utcOffset": "+01:00"
+    }
+  ],
+  "plugs": [
+    {
+      "type": "C",
+      "voltage": 230,
+      "frequency": 50
+    },
+    {
+      "type": "F",
+      "voltage": 230,
+      "frequency": 50
+    }
+  ],
+  "flagEmoji": "🇽🇰"
+}
+
+]

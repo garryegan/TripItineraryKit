@@ -1,0 +1,26 @@
+{
+	"name": "tripitinerarykit",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''",
+		"update-fx": "node scripts/update-fx.js"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^7.0.1",
+		"@sveltejs/adapter-cloudflare": "^7.2.8",
+		"@sveltejs/kit": "^2.57.0",
+		"@sveltejs/vite-plugin-svelte": "^7.0.0",
+		"@types/leaflet": "^1.9.21",
+		"svelte": "^5.55.2",
+		"vite": "^8.0.7"
+	},
+	"dependencies": {
+		"leaflet": "^1.9.4",
+		"node-fetch": "^3.3.2"
+	}
+}
