@@ -558,7 +558,7 @@ const dynamicLanguages = visitedCountries.map((c) => {
   }
 
 :root {
-  --trip-panel-width: 520px;
+  --trip-panel-width: 450px;
 }
 
 .panel-column {

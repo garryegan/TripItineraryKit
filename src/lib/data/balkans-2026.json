@@ -17,7 +17,6 @@
     }
   ],
   "tripOverview": {
-
     "generalNotes": [
       "This itinerary includes a Trip‑a‑Deal guided tour covering Bulgaria, North Macedonia, Albania, Montenegro, Croatia, Bosnia and Herzegovina, and Slovenia.",
       "Independent travel days occur in Sofia, Zagreb, and Budapest.",
@@ -119,7 +118,6 @@
       "Singapore: Police 999, Ambulance/Fire 995.",
       "Australia: 000."
     ],
-
     "transportBasics": [
       "Trip‑a‑Deal provides coach transport for guided days.",
       "FlixBus used for Zagreb → Budapest transfer.",
@@ -128,7 +126,6 @@
       "Border crossings may require passport checks - keep documents accessible."
     ]
   },
-   
   "segments": [
     {
       "type": "flight",
@@ -1300,6 +1297,51 @@
           "source": "included"
         },
         "notes": "Included in Trip-a-Deal package (optional excursion extra)"
+      }
+    },
+    {
+      "type": "restaurant",
+      "title": "Jadran Kod Krsta",
+      "description": "Dinner",
+      "from": null,
+      "to": null,
+      "departLocal": null,
+      "arriveLocal": null,
+      "startLocal": "2026-05-12T18:30:00+02:00",
+      "endLocal": "2026-05-12T21:00:00+02:00",
+      "checkInLocal": null,
+      "checkOutLocal": null,
+      "provider": {
+        "name": null,
+        "dayNumber": 7
+      },
+      "distanceKm": null,
+      "notes": [],
+      "bookingRefs": [],
+      "confirmation": null,
+      "website": null,
+      "phone": null,
+      "address": null,
+      "locations": [
+        {
+          "name": "Budva, Montenegro",
+          "lat": 42.2911489,
+          "lon": 18.840295
+        }
+      ],
+      "attachments": [],
+      "cost": {
+        "incurredDate": null,
+        "local": {
+          "amount": null,
+          "currency": null
+        },
+        "aud": {
+          "amount": null,
+          "rateUsed": null,
+          "source": "included"
+        },
+        "notes": null
       }
     },
     {
