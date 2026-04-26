@@ -1,6 +1,27 @@
 <script>
   import { onMount, tick } from "svelte";
 
+  // --- Leaflet static imports (required for Cloudflare) ---
+  import L from "leaflet";
+  import "leaflet/dist/leaflet.css";
+
+  import iconUrl from "leaflet/dist/images/marker-icon.png";
+  import iconRetinaUrl from "leaflet/dist/images/marker-icon-2x.png";
+  import shadowUrl from "leaflet/dist/images/marker-shadow.png";
+
+  const defaultIcon = L.icon({
+    iconUrl,
+    iconRetinaUrl,
+    shadowUrl,
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
+  });
+
+  L.Marker.prototype.options.icon = defaultIcon;
+
+  // --- Props ---
   const { segments } = $props();
 
   function filterSegmentsWithinAccommodationWindow(segments) {
@@ -23,8 +44,6 @@
   let map;
 
   onMount(async () => {
-    const L = await import("leaflet");
-    await import("leaflet/dist/leaflet.css");
     await tick();
 
     const allLocations = [];
