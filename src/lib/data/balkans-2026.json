@@ -1316,7 +1316,7 @@
         "dayNumber": 7
       },
       "distanceKm": null,
-      "notes": [],
+      "notes": ["Have requested reservation by WhatsApp with note concerning Neville's dairy intolerance and table for 4 with uninterrupted sea views"],
       "bookingRefs": [],
       "confirmation": null,
       "website": null,
@@ -1342,7 +1342,10 @@
           "source": "included"
         },
         "notes": null
-      }
+      },
+      "date": "2026-05-12",
+      "links": [],
+      "images": []
     },
     {
       "type": "tour",

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TripItineraryKit Segment Editor</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 20px;
+      background: #f5f5f7;
+      color: #222;
+    }
+    h1 {
+      margin-bottom: 0.2rem;
+    }
+    .panel {
+      background: #fff;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    label {
+      display: block;
+      margin-top: 8px;
+      font-weight: 600;
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="date"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 6px 8px;
+      margin-top: 4px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-family: inherit;
+      font-size: 14px;
+    }
+    textarea {
+      min-height: 60px;
+      resize: vertical;
+    }
+    .row {
+      display: flex;
+      gap: 12px;
+    }
+    .col {
+      flex: 1;
+    }
+    button {
+      padding: 8px 14px;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      margin-right: 8px;
+    }
+    button.primary {
+      background: #2563eb;
+      color: #fff;
+    }
+    button.secondary {
+      background: #e5e7eb;
+      color: #111827;
+    }
+    button.danger {
+      background: #dc2626;
+      color: #fff;
+    }
+    .status {
+      margin-top: 8px;
+      font-size: 13px;
+      color: #4b5563;
+    }
+    .status.error {
+      color: #b91c1c;
+    }
+    .small {
+      font-size: 12px;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+  <h1>TripItineraryKit Segment Editor</h1>
+  <p class="small">
+    Local form tool for editing <code>balkans-2026.json</code> without breaking JSON structure.
+  </p>
+
+  <div class="panel">
+    <h2>1. Load JSON file</h2>
+    <input type="file" id="fileInput" accept=".json" />
+    <div id="loadStatus" class="status"></div>
+  </div>
+
+  <div class="panel">
+    <h2>2. Select or create segment</h2>
+    <label for="segmentSelect">Segments</label>
+    <select id="segmentSelect">
+      <option value="">-- No file loaded --</option>
+    </select>
+    <div style="margin-top:8px;">
+      <button id="newSegmentBtn" class="secondary">Add New Segment</button>
+      <button id="deleteSegmentBtn" class="danger">Delete Selected Segment</button>
+    </div>
+    <div id="segmentStatus" class="status"></div>
+  </div>
+
+  <div class="panel">
+    <h2>3. Edit segment fields</h2>
+
+    <div class="row">
+      <div class="col">
+        <label for="typeInput">Type</label>
+        <input type="text" id="typeInput" placeholder="e.g. restaurant, accommodation, activity" />
+      </div>
+      <div class="col">
+        <label for="titleInput">Title</label>
+        <input type="text" id="titleInput" placeholder="e.g. Konoba Portun" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <label for="dateInput">Date (optional)</label>
+        <input type="date" id="dateInput" />
+      </div>
+      <div class="col">
+        <label for="locationNameInput">Location name</label>
+        <input type="text" id="locationNameInput" placeholder="e.g. Budva, Montenegro" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <label for="latInput">Latitude</label>
+        <input type="number" id="latInput" step="0.000001" placeholder="e.g. 42.286" />
+      </div>
+      <div class="col">
+        <label for="lonInput">Longitude</label>
+        <input type="number" id="lonInput" step="0.000001" placeholder="e.g. 18.840" />
+      </div>
+    </div>
+
+    <label for="notesInput">Notes (optional)</label>
+    <textarea id="notesInput" placeholder="e.g. Seafood restaurant in Budva"></textarea>
+
+    <label for="linksInput">Links (optional, comma-separated URLs)</label>
+    <input type="text" id="linksInput" placeholder="e.g. https://..., https://..." />
+
+    <label for="imagesInput">Images (optional, comma-separated paths/URLs)</label>
+    <input type="text" id="imagesInput" placeholder="e.g. /images/portun.jpg" />
+
+    <div style="margin-top:12px;">
+      <button id="saveSegmentBtn" class="primary">Save Segment Changes</button>
+    </div>
+    <div id="editStatus" class="status"></div>
+  </div>
+
+  <div class="panel">
+    <h2>4. Download updated JSON</h2>
+    <button id="downloadBtn" class="primary">Download balkans-2026.json</button>
+    <div class="status small">
+      After downloading, replace the file in your project:
+      <br />
+      <code>C:\Projects\TripItineraryKit\src\lib\data\balkans-2026.json</code>
+    </div>
+  </div>
+
+  <script>
+    let jsonData = null;        // full JSON object
+    let segments = null;        // reference to jsonData.segments
+    let currentIndex = -1;      // selected segment index
+
+    const fileInput = document.getElementById('fileInput');
+    const loadStatus = document.getElementById('loadStatus');
+    const segmentSelect = document.getElementById('segmentSelect');
+    const segmentStatus = document.getElementById('segmentStatus');
+    const editStatus = document.getElementById('editStatus');
+
+    const typeInput = document.getElementById('typeInput');
+    const titleInput = document.getElementById('titleInput');
+    const dateInput = document.getElementById('dateInput');
+    const locationNameInput = document.getElementById('locationNameInput');
+    const latInput = document.getElementById('latInput');
+    const lonInput = document.getElementById('lonInput');
+    const notesInput = document.getElementById('notesInput');
+    const linksInput = document.getElementById('linksInput');
+    const imagesInput = document.getElementById('imagesInput');
+
+    const newSegmentBtn = document.getElementById('newSegmentBtn');
+    const deleteSegmentBtn = document.getElementById('deleteSegmentBtn');
+    const saveSegmentBtn = document.getElementById('saveSegmentBtn');
+    const downloadBtn = document.getElementById('downloadBtn');
+
+    function resetStatuses() {
+      loadStatus.textContent = '';
+      segmentStatus.textContent = '';
+      editStatus.textContent = '';
+      loadStatus.classList.remove('error');
+      segmentStatus.classList.remove('error');
+      editStatus.classList.remove('error');
+    }
+
+    fileInput.addEventListener('change', (e) => {
+      resetStatuses();
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        try {
+          jsonData = JSON.parse(event.target.result);
+          if (!Array.isArray(jsonData.segments)) {
+            throw new Error("JSON does not contain a 'segments' array.");
+          }
+          segments = jsonData.segments;
+          populateSegmentSelect();
+          loadStatus.textContent = `Loaded ${file.name} with ${segments.length} segments.`;
+        } catch (err) {
+          jsonData = null;
+          segments = null;
+          segmentSelect.innerHTML = '<option value="">-- Error loading file --</option>';
+          loadStatus.textContent = 'Error: ' + err.message;
+          loadStatus.classList.add('error');
+        }
+      };
+      reader.readAsText(file);
+    });
+
+    function populateSegmentSelect() {
+      segmentSelect.innerHTML = '';
+      if (!segments || segments.length === 0) {
+        const opt = document.createElement('option');
+        opt.value = '';
+        opt.textContent = '-- No segments --';
+        segmentSelect.appendChild(opt);
+        currentIndex = -1;
+        clearForm();
+        return;
+      }
+
+      const placeholder = document.createElement('option');
+      placeholder.value = '';
+      placeholder.textContent = '-- Select a segment --';
+      segmentSelect.appendChild(placeholder);
+
+      segments.forEach((seg, index) => {
+        const opt = document.createElement('option');
+        const title = seg.title || '(no title)';
+        const type = seg.type || '(no type)';
+        opt.value = index;
+        opt.textContent = `${index}: [${type}] ${title}`;
+        segmentSelect.appendChild(opt);
+      });
+
+      currentIndex = -1;
+      clearForm();
+    }
+
+    function clearForm() {
+      typeInput.value = '';
+      titleInput.value = '';
+      dateInput.value = '';
+      locationNameInput.value = '';
+      latInput.value = '';
+      lonInput.value = '';
+      notesInput.value = '';
+      linksInput.value = '';
+      imagesInput.value = '';
+    }
+
+    segmentSelect.addEventListener('change', () => {
+      resetStatuses();
+      const value = segmentSelect.value;
+      if (value === '') {
+        currentIndex = -1;
+        clearForm();
+        return;
+      }
+      currentIndex = parseInt(value, 10);
+      loadSegmentIntoForm();
+    });
+
+    function loadSegmentIntoForm() {
+      if (!segments || currentIndex < 0 || currentIndex >= segments.length) {
+        clearForm();
+        return;
+      }
+      const seg = segments[currentIndex];
+
+      typeInput.value = seg.type || '';
+      titleInput.value = seg.title || '';
+      dateInput.value = seg.date || '';
+
+      const loc = Array.isArray(seg.locations) && seg.locations.length > 0 ? seg.locations[0] : null;
+      locationNameInput.value = loc && loc.name ? loc.name : '';
+      latInput.value = loc && typeof loc.lat === 'number' ? loc.lat : '';
+      lonInput.value = loc && typeof loc.lon === 'number' ? loc.lon : '';
+
+      notesInput.value = seg.notes || '';
+
+      if (Array.isArray(seg.links)) {
+        linksInput.value = seg.links.join(', ');
+      } else {
+        linksInput.value = '';
+      }
+
+      if (Array.isArray(seg.images)) {
+        imagesInput.value = seg.images.join(', ');
+      } else {
+        imagesInput.value = '';
+      }
+    }
+
+    newSegmentBtn.addEventListener('click', () => {
+      resetStatuses();
+      if (!segments) {
+        segmentStatus.textContent = 'Load a JSON file first.';
+        segmentStatus.classList.add('error');
+        return;
+      }
+
+      const newSeg = {
+        type: '',
+        title: '',
+        date: '',
+        locations: [
+          {
+            name: '',
+            lat: 0,
+            lon: 0
+          }
+        ],
+        notes: '',
+        links: [],
+        images: []
+      };
+
+      segments.push(newSeg);
+      populateSegmentSelect();
+      segmentSelect.value = String(segments.length - 1);
+      currentIndex = segments.length - 1;
+      loadSegmentIntoForm();
+      segmentStatus.textContent = `New segment created at index ${currentIndex}.`;
+    });
+
+    deleteSegmentBtn.addEventListener('click', () => {
+      resetStatuses();
+      if (!segments) {
+        segmentStatus.textContent = 'Load a JSON file first.';
+        segmentStatus.classList.add('error');
+        return;
+      }
+      if (currentIndex < 0 || currentIndex >= segments.length) {
+        segmentStatus.textContent = 'No segment selected.';
+        segmentStatus.classList.add('error');
+        return;
+      }
+      if (!confirm(`Delete segment ${currentIndex}? This cannot be undone here.`)) {
+        return;
+      }
+      segments.splice(currentIndex, 1);
+      populateSegmentSelect();
+      segmentStatus.textContent = 'Segment deleted.';
+    });
+
+    saveSegmentBtn.addEventListener('click', () => {
+      resetStatuses();
+      if (!segments) {
+        editStatus.textContent = 'Load a JSON file first.';
+        editStatus.classList.add('error');
+        return;
+      }
+      if (currentIndex < 0 || currentIndex >= segments.length) {
+        editStatus.textContent = 'No segment selected (or new segment not created).';
+        editStatus.classList.add('error');
+        return;
+      }
+
+      const type = typeInput.value.trim();
+      const title = titleInput.value.trim();
+      const locName = locationNameInput.value.trim();
+      const latVal = latInput.value.trim();
+      const lonVal = lonInput.value.trim();
+
+      if (!type || !title || !locName || !latVal || !lonVal) {
+        editStatus.textContent = 'Type, Title, Location name, Latitude, and Longitude are required.';
+        editStatus.classList.add('error');
+        return;
+      }
+
+      const latNum = Number(latVal);
+      const lonNum = Number(lonVal);
+      if (Number.isNaN(latNum) || Number.isNaN(lonNum)) {
+        editStatus.textContent = 'Latitude and Longitude must be valid numbers.';
+        editStatus.classList.add('error');
+        return;
+      }
+
+      const seg = segments[currentIndex];
+      seg.type = type;
+      seg.title = title;
+      seg.date = dateInput.value || '';
+
+      seg.locations = [
+        {
+          name: locName,
+          lat: latNum,
+          lon: lonNum
+        }
+      ];
+
+      seg.notes = notesInput.value.trim() || '';
+
+      const linksRaw = linksInput.value.trim();
+      seg.links = linksRaw
+        ? linksRaw.split(',').map(s => s.trim()).filter(Boolean)
+        : [];
+
+      const imagesRaw = imagesInput.value.trim();
+      seg.images = imagesRaw
+        ? imagesRaw.split(',').map(s => s.trim()).filter(Boolean)
+        : [];
+
+      populateSegmentSelect();
+      segmentSelect.value = String(currentIndex);
+      editStatus.textContent = 'Segment saved successfully.';
+    });
+
+    downloadBtn.addEventListener('click', () => {
+      resetStatuses();
+      if (!jsonData) {
+        editStatus.textContent = 'Load a JSON file first.';
+        editStatus.classList.add('error');
+        return;
+      }
+      try {
+        const jsonStr = JSON.stringify(jsonData, null, 2);
+        const blob = new Blob([jsonStr], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'balkans-2026.json';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        editStatus.textContent = 'Downloaded updated balkans-2026.json.';
+      } catch (err) {
+        editStatus.textContent = 'Error generating JSON: ' + err.message;
+        editStatus.classList.add('error');
+      }
+    });
+  </script>
+</body>
+</html>
