@@ -173,7 +173,7 @@
           "rateUsed": null,
           "source": null
         },
-        "notes": "Total Cost Egans itinerary"
+        "comment": "Total Cost Egans itinerary"
       },
       "flight": {
         "flightNumber": "JQ33",
@@ -275,7 +275,7 @@
           "rateUsed": null,
           "source": null
         },
-        "notes": "Total Cost Egans itinerary"
+        "comment": "Total Cost Egans itinerary"
       },
       "flight": {
         "flightNumber": "TK311",
@@ -377,7 +377,7 @@
           "rateUsed": null,
           "source": null
         },
-        "notes": ""
+        "comment": ""
       },
       "flight": {
         "flightNumber": "TK1027",
@@ -428,7 +428,9 @@
           "rateUsed": null,
           "source": null
         },
-        "notes": "Egans accommodation - 2 nights"
+        "locations": [
+          "Egans accommodation - 2 nights"
+        ]
       }
     },
     {
@@ -567,7 +569,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": ""
+        "locations": [
+          ""
+        ]
       }
     },
     {
@@ -612,7 +616,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Included in Trip-a-Deal package"
+        "locations": [
+          "Included in Trip-a-Deal package"
+        ]
       }
     },
     {
@@ -659,7 +665,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Trip-a-Deal provided accommodation"
+        "locations": [
+          "Trip-a-Deal provided accommodation"
+        ]
       }
     },
     {
@@ -706,7 +714,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Trip-a-Deal provided accommodation"
+        "locations": [
+          "Trip-a-Deal provided accommodation"
+        ]
       }
     },
     {
@@ -759,7 +769,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Included in Trip-a-Deal package"
+        "locations": [
+          "Included in Trip-a-Deal package"
+        ]
       }
     },
     {
@@ -806,7 +818,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Trip-a-Deal provided accommodation"
+        "locations": [
+          "Trip-a-Deal provided accommodation"
+        ]
       }
     },
     {
@@ -859,7 +873,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Included in Trip-a-Deal package"
+        "locations": [
+          "Included in Trip-a-Deal package"
+        ]
       }
     },
     {
@@ -906,7 +922,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Trip-a-Deal provided accommodation"
+        "locations": [
+          "Trip-a-Deal provided accommodation"
+        ]
       }
     },
     {
@@ -953,7 +971,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Trip-a-Deal provided accommodation"
+        "locations": [
+          "Trip-a-Deal provided accommodation"
+        ]
       }
     },
     {
@@ -1006,7 +1026,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Included in Trip-a-Deal package"
+        "locations": [
+          "Included in Trip-a-Deal package"
+        ]
       }
     },
     {
@@ -1053,7 +1075,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Trip-a-Deal provided accommodation"
+        "locations": [
+          "Trip-a-Deal provided accommodation"
+        ]
       }
     },
     {
@@ -1100,7 +1124,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Trip-a-Deal provided accommodation"
+        "locations": [
+          "Trip-a-Deal provided accommodation"
+        ]
       }
     },
     {
@@ -1149,7 +1175,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Included in Trip-a-Deal package"
+        "locations": [
+          "Included in Trip-a-Deal package"
+        ]
       }
     },
     {
@@ -1196,7 +1224,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Trip-a-Deal provided accommodation"
+        "locations": [
+          "Trip-a-Deal provided accommodation"
+        ]
       }
     },
     {
@@ -1243,7 +1273,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Trip-a-Deal provided accommodation"
+        "locations": [
+          "Trip-a-Deal provided accommodation"
+        ]
       }
     },
     {
@@ -1296,7 +1328,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Included in Trip-a-Deal package (optional excursion extra)"
+        "locations": [
+          "Included in Trip-a-Deal package (optional excursion extra)"
+        ]
       }
     },
     {
@@ -1316,7 +1350,9 @@
         "dayNumber": 7
       },
       "distanceKm": null,
-      "notes": ["Have requested reservation by WhatsApp with note concerning Neville's dairy intolerance and table for 4 with uninterrupted sea views"],
+      "notes": [
+        "Have requested reservation by WhatsApp with note concerning Neville's dairy intolerance and table for 4 with uninterrupted sea views. Awaiting response."
+      ],
       "bookingRefs": [],
       "confirmation": null,
       "website": null,
@@ -1344,8 +1380,11 @@
         "notes": null
       },
       "date": "2026-05-12",
-      "links": [],
-      "images": []
+      "links": [
+        "https://restaurantjadran.me/"
+      ],
+      "images": [],
+      "comment": null
     },
     {
       "type": "tour",
@@ -1397,7 +1436,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Included in Trip-a-Deal package"
+        "locations": [
+          "Included in Trip-a-Deal package"
+        ]
       }
     },
     {
@@ -1444,7 +1485,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Trip-a-Deal provided accommodation"
+        "locations": [
+          "Trip-a-Deal provided accommodation"
+        ]
       }
     },
     {
@@ -1491,7 +1534,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Trip-a-Deal provided accommodation"
+        "locations": [
+          "Trip-a-Deal provided accommodation"
+        ]
       }
     },
     {
@@ -1544,7 +1589,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Included in Trip-a-Deal package"
+        "locations": [
+          "Included in Trip-a-Deal package"
+        ]
       }
     },
     {
@@ -1591,7 +1638,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Trip-a-Deal provided accommodation"
+        "locations": [
+          "Trip-a-Deal provided accommodation"
+        ]
       }
     },
     {
@@ -1638,7 +1687,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Trip-a-Deal provided accommodation"
+        "locations": [
+          "Trip-a-Deal provided accommodation"
+        ]
       }
     },
     {
@@ -1696,7 +1747,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Included in Trip-a-Deal package"
+        "locations": [
+          "Included in Trip-a-Deal package"
+        ]
       }
     },
     {
@@ -1743,7 +1796,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Trip-a-Deal provided accommodation"
+        "locations": [
+          "Trip-a-Deal provided accommodation"
+        ]
       }
     },
     {
@@ -1790,7 +1845,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Trip-a-Deal provided accommodation"
+        "locations": [
+          "Trip-a-Deal provided accommodation"
+        ]
       }
     },
     {
@@ -1843,7 +1900,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Plitvice entry ticket already pre-purchased"
+        "locations": [
+          "Plitvice entry ticket already pre-purchased"
+        ]
       }
     },
     {
@@ -1890,7 +1949,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Trip-a-Deal provided accommodation"
+        "locations": [
+          "Trip-a-Deal provided accommodation"
+        ]
       }
     },
     {
@@ -1937,7 +1998,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Trip-a-Deal provided accommodation"
+        "locations": [
+          "Trip-a-Deal provided accommodation"
+        ]
       }
     },
     {
@@ -1995,7 +2058,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Included in Trip-a-Deal package"
+        "locations": [
+          "Included in Trip-a-Deal package"
+        ]
       }
     },
     {
@@ -2042,7 +2107,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Trip-a-Deal provided accommodation"
+        "locations": [
+          "Trip-a-Deal provided accommodation"
+        ]
       }
     },
     {
@@ -2089,7 +2156,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Trip-a-Deal provided accommodation"
+        "locations": [
+          "Trip-a-Deal provided accommodation"
+        ]
       }
     },
     {
@@ -2142,7 +2211,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Postojna Cave tour included"
+        "locations": [
+          "Postojna Cave tour included"
+        ]
       }
     },
     {
@@ -2189,7 +2260,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Trip-a-Deal provided accommodation"
+        "locations": [
+          "Trip-a-Deal provided accommodation"
+        ]
       }
     },
     {
@@ -2248,7 +2321,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Included in Trip-a-Deal package"
+        "locations": [
+          "Included in Trip-a-Deal package"
+        ]
       }
     },
     {
@@ -2295,7 +2370,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Trip-a-Deal provided accommodation"
+        "locations": [
+          "Trip-a-Deal provided accommodation"
+        ]
       }
     },
     {
@@ -2342,7 +2419,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Included in Trip-a-Deal package"
+        "locations": [
+          "Included in Trip-a-Deal package"
+        ]
       }
     },
     {
@@ -2389,7 +2468,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Trip-a-Deal provided accommodation"
+        "locations": [
+          "Trip-a-Deal provided accommodation"
+        ]
       }
     },
     {
@@ -2436,7 +2517,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "End of Trip-a-Deal package"
+        "locations": [
+          "End of Trip-a-Deal package"
+        ]
       }
     },
     {
@@ -2483,7 +2566,9 @@
           "rateUsed": null,
           "source": null
         },
-        "notes": "Egans independent accommodation - 2 rooms"
+        "locations": [
+          "Egans independent accommodation - 2 rooms"
+        ]
       }
     },
     {
@@ -2577,7 +2662,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Stay completed"
+        "locations": [
+          "Stay completed"
+        ]
       }
     },
     {
@@ -2627,7 +2714,9 @@
           "rateUsed": null,
           "source": null
         },
-        "notes": "FlixBus booking"
+        "locations": [
+          "FlixBus booking"
+        ]
       }
     },
     {
@@ -2674,7 +2763,9 @@
           "rateUsed": null,
           "source": null
         },
-        "notes": "4 × €169 Cozy Room; breakfast conditions per booking"
+        "locations": [
+          "4 × €169 Cozy Room; breakfast conditions per booking"
+        ]
       }
     },
     {
@@ -2909,7 +3000,9 @@
           "rateUsed": null,
           "source": "included"
         },
-        "notes": "Stay completed"
+        "locations": [
+          "Stay completed"
+        ]
       }
     },
     {
@@ -2958,7 +3051,9 @@
           "rateUsed": null,
           "source": null
         },
-        "notes": "Total Cost Egans itinerary"
+        "locations": [
+          "Total Cost Egans itinerary"
+        ]
       },
       "flight": {
         "flightNumber": "TK1038",
@@ -3060,7 +3155,9 @@
           "rateUsed": null,
           "source": null
         },
-        "notes": "Total Cost Egans itinerary"
+        "locations": [
+          "Total Cost Egans itinerary"
+        ]
       },
       "flight": {
         "flightNumber": "TK54",
@@ -3162,7 +3259,9 @@
           "rateUsed": null,
           "source": null
         },
-        "notes": "Total Cost Egans itinerary"
+        "locations": [
+          "Total Cost Egans itinerary"
+        ]
       },
       "flight": {
         "flightNumber": "JQ8",

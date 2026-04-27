@@ -82,8 +82,38 @@
       font-size: 12px;
       color: #6b7280;
     }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 6px;
+      text-align: left;
+    }
+    table th {
+      background: #f0f0f0;
+    }
+    .collapse-header {
+      cursor: pointer;
+      font-weight: 600;
+      margin-top: 12px;
+      padding: 6px;
+      background: #e5e7eb;
+      border-radius: 4px;
+    }
+    .collapse-content {
+      display: none;
+      margin-top: 8px;
+      padding: 10px;
+      background: #fafafa;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+    }
   </style>
 </head>
+
 <body>
   <h1>TripItineraryKit Segment Editor</h1>
   <p class="small">
@@ -112,47 +142,72 @@
   <div class="panel">
     <h2>3. Edit segment fields</h2>
 
-    <div class="row">
-      <div class="col">
-        <label for="typeInput">Type</label>
-        <input type="text" id="typeInput" placeholder="e.g. restaurant, accommodation, activity" />
-      </div>
-      <div class="col">
-        <label for="titleInput">Title</label>
-        <input type="text" id="titleInput" placeholder="e.g. Konoba Portun" />
-      </div>
+    <label for="typeInput">Segment Type</label>
+    <select id="typeInput">
+      <option value="">-- Select Type --</option>
+      <option value="flight">flight</option>
+      <option value="layover">layover</option>
+      <option value="accommodation">accommodation</option>
+      <option value="transport">transport</option>
+      <option value="tour">tour</option>
+      <option value="activity">activity</option>
+      <option value="restaurant">restaurant</option>
+      <option value="car-rental">car-rental</option>
+      <option value="free-day">free-day</option>
+      <option value="note">note</option>
+      <option value="default">default</option>
+    </select>
+
+    <label for="titleInput">Title</label>
+    <input type="text" id="titleInput" placeholder="e.g. Konoba Portun" />
+
+    <!-- Collapsible Date Fields -->
+    <div class="collapse-header" id="dateCollapseHeader">▼ Date Fields (click to expand)</div>
+    <div class="collapse-content" id="dateCollapse">
+      <label>startLocal</label>
+      <input type="text" id="startLocalInput" placeholder="2026-05-05T05:45:00+03:00" />
+
+      <label>endLocal</label>
+      <input type="text" id="endLocalInput" placeholder="2026-05-05T07:15:00+03:00" />
+
+      <label>departLocal</label>
+      <input type="text" id="departLocalInput" placeholder="2026-05-05T05:45:00+03:00" />
+
+      <label>arriveLocal</label>
+      <input type="text" id="arriveLocalInput" placeholder="2026-05-05T07:15:00+03:00" />
+
+      <label>checkInLocal</label>
+      <input type="text" id="checkInLocalInput" placeholder="2026-05-21T15:00:00+02:00" />
+
+      <label>checkOutLocal</label>
+      <input type="text" id="checkOutLocalInput" placeholder="2026-05-23T11:00:00+02:00" />
     </div>
 
-    <div class="row">
-      <div class="col">
-        <label for="dateInput">Date (optional)</label>
-        <input type="date" id="dateInput" />
-      </div>
-      <div class="col">
-        <label for="locationNameInput">Location name</label>
-        <input type="text" id="locationNameInput" placeholder="e.g. Budva, Montenegro" />
-      </div>
-    </div>
+    <h3>Locations</h3>
+    <table id="locationsTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Latitude</th>
+          <th>Longitude</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button id="addLocationBtn" class="secondary" style="margin-top:10px;">Add Location</button>
 
-    <div class="row">
-      <div class="col">
-        <label for="latInput">Latitude</label>
-        <input type="number" id="latInput" step="0.000001" placeholder="e.g. 42.286" />
-      </div>
-      <div class="col">
-        <label for="lonInput">Longitude</label>
-        <input type="number" id="lonInput" step="0.000001" placeholder="e.g. 18.840" />
-      </div>
-    </div>
+    <label for="notesInput">Notes (each line becomes an array item)</label>
+    <textarea id="notesInput" placeholder="Line 1&#10;Line 2"></textarea>
 
-    <label for="notesInput">Notes (optional)</label>
-    <textarea id="notesInput" placeholder="e.g. Seafood restaurant in Budva"></textarea>
+    <label for="commentInput">Comment (optional)</label>
+    <input type="text" id="commentInput" placeholder="Summary comment" />
 
-    <label for="linksInput">Links (optional, comma-separated URLs)</label>
-    <input type="text" id="linksInput" placeholder="e.g. https://..., https://..." />
+    <label for="linksInput">Links (comma-separated URLs)</label>
+    <input type="text" id="linksInput" placeholder="https://..., https://..." />
 
-    <label for="imagesInput">Images (optional, comma-separated paths/URLs)</label>
-    <input type="text" id="imagesInput" placeholder="e.g. /images/portun.jpg" />
+    <label for="imagesInput">Images (comma-separated URLs or paths)</label>
+    <input type="text" id="imagesInput" placeholder="/images/photo.jpg, https://..." />
 
     <div style="margin-top:12px;">
       <button id="saveSegmentBtn" class="primary">Save Segment Changes</button>
@@ -171,10 +226,16 @@
   </div>
 
   <script>
+    // -------------------------------
+    // Core Data Structures
+    // -------------------------------
     let jsonData = null;        // full JSON object
     let segments = null;        // reference to jsonData.segments
     let currentIndex = -1;      // selected segment index
 
+    // -------------------------------
+    // DOM Elements
+    // -------------------------------
     const fileInput = document.getElementById('fileInput');
     const loadStatus = document.getElementById('loadStatus');
     const segmentSelect = document.getElementById('segmentSelect');
@@ -183,11 +244,24 @@
 
     const typeInput = document.getElementById('typeInput');
     const titleInput = document.getElementById('titleInput');
-    const dateInput = document.getElementById('dateInput');
-    const locationNameInput = document.getElementById('locationNameInput');
-    const latInput = document.getElementById('latInput');
-    const lonInput = document.getElementById('lonInput');
+
+    // Date fields
+    const dateCollapseHeader = document.getElementById('dateCollapseHeader');
+    const dateCollapse = document.getElementById('dateCollapse');
+    const startLocalInput = document.getElementById('startLocalInput');
+    const endLocalInput = document.getElementById('endLocalInput');
+    const departLocalInput = document.getElementById('departLocalInput');
+    const arriveLocalInput = document.getElementById('arriveLocalInput');
+    const checkInLocalInput = document.getElementById('checkInLocalInput');
+    const checkOutLocalInput = document.getElementById('checkOutLocalInput');
+
+    // Locations table
+    const locationsTableBody = document.querySelector('#locationsTable tbody');
+    const addLocationBtn = document.getElementById('addLocationBtn');
+
+    // Notes, comment, links, images
     const notesInput = document.getElementById('notesInput');
+    const commentInput = document.getElementById('commentInput');
     const linksInput = document.getElementById('linksInput');
     const imagesInput = document.getElementById('imagesInput');
 
@@ -196,6 +270,9 @@
     const saveSegmentBtn = document.getElementById('saveSegmentBtn');
     const downloadBtn = document.getElementById('downloadBtn');
 
+    // -------------------------------
+    // Utility: Reset status messages
+    // -------------------------------
     function resetStatuses() {
       loadStatus.textContent = '';
       segmentStatus.textContent = '';
@@ -205,6 +282,9 @@
       editStatus.classList.remove('error');
     }
 
+    // -------------------------------
+    // Load JSON File
+    // -------------------------------
     fileInput.addEventListener('change', (e) => {
       resetStatuses();
       const file = e.target.files[0];
@@ -214,12 +294,15 @@
       reader.onload = (event) => {
         try {
           jsonData = JSON.parse(event.target.result);
+
           if (!Array.isArray(jsonData.segments)) {
             throw new Error("JSON does not contain a 'segments' array.");
           }
+
           segments = jsonData.segments;
           populateSegmentSelect();
           loadStatus.textContent = `Loaded ${file.name} with ${segments.length} segments.`;
+
         } catch (err) {
           jsonData = null;
           segments = null;
@@ -228,11 +311,16 @@
           loadStatus.classList.add('error');
         }
       };
+
       reader.readAsText(file);
     });
 
+    // -------------------------------
+    // Populate Segment Dropdown
+    // -------------------------------
     function populateSegmentSelect() {
       segmentSelect.innerHTML = '';
+
       if (!segments || segments.length === 0) {
         const opt = document.createElement('option');
         opt.value = '';
@@ -261,54 +349,91 @@
       clearForm();
     }
 
+    // -------------------------------
+    // Clear Form
+    // -------------------------------
     function clearForm() {
       typeInput.value = '';
       titleInput.value = '';
-      dateInput.value = '';
-      locationNameInput.value = '';
-      latInput.value = '';
-      lonInput.value = '';
+
+      startLocalInput.value = '';
+      endLocalInput.value = '';
+      departLocalInput.value = '';
+      arriveLocalInput.value = '';
+      checkInLocalInput.value = '';
+      checkOutLocalInput.value = '';
+
+      locationsTableBody.innerHTML = '';
+
       notesInput.value = '';
+      commentInput.value = '';
       linksInput.value = '';
       imagesInput.value = '';
     }
 
+    // -------------------------------
+    // Handle Segment Selection
+    // -------------------------------
     segmentSelect.addEventListener('change', () => {
       resetStatuses();
       const value = segmentSelect.value;
+
       if (value === '') {
         currentIndex = -1;
         clearForm();
         return;
       }
+
       currentIndex = parseInt(value, 10);
       loadSegmentIntoForm();
     });
 
+    // -------------------------------
+    // Load Segment Into Form
+    // -------------------------------
     function loadSegmentIntoForm() {
       if (!segments || currentIndex < 0 || currentIndex >= segments.length) {
         clearForm();
         return;
       }
+
       const seg = segments[currentIndex];
 
       typeInput.value = seg.type || '';
       titleInput.value = seg.title || '';
-      dateInput.value = seg.date || '';
 
-      const loc = Array.isArray(seg.locations) && seg.locations.length > 0 ? seg.locations[0] : null;
-      locationNameInput.value = loc && loc.name ? loc.name : '';
-      latInput.value = loc && typeof loc.lat === 'number' ? loc.lat : '';
-      lonInput.value = loc && typeof loc.lon === 'number' ? loc.lon : '';
+      // Date fields (null → empty string)
+      startLocalInput.value = seg.startLocal || '';
+      endLocalInput.value = seg.endLocal || '';
+      departLocalInput.value = seg.departLocal || '';
+      arriveLocalInput.value = seg.arriveLocal || '';
+      checkInLocalInput.value = seg.checkInLocal || '';
+      checkOutLocalInput.value = seg.checkOutLocal || '';
 
-      notesInput.value = seg.notes || '';
+      // Locations
+      locationsTableBody.innerHTML = '';
+      if (Array.isArray(seg.locations)) {
+        seg.locations.forEach((loc) => addLocationRow(loc));
+      }
 
+      // Notes array → textarea
+      if (Array.isArray(seg.notes)) {
+        notesInput.value = seg.notes.join('\n');
+      } else {
+        notesInput.value = '';
+      }
+
+      // Comment string
+      commentInput.value = seg.comment || '';
+
+      // Links
       if (Array.isArray(seg.links)) {
         linksInput.value = seg.links.join(', ');
       } else {
         linksInput.value = '';
       }
 
+      // Images
       if (Array.isArray(seg.images)) {
         imagesInput.value = seg.images.join(', ');
       } else {
@@ -316,8 +441,264 @@
       }
     }
 
+    // -------------------------------
+    // Collapsible Date Fields
+    // -------------------------------
+    dateCollapseHeader.addEventListener('click', () => {
+      if (dateCollapse.style.display === 'block') {
+        dateCollapse.style.display = 'none';
+        dateCollapseHeader.textContent = '▼ Date Fields (click to expand)';
+      } else {
+        dateCollapse.style.display = 'block';
+        dateCollapseHeader.textContent = '▲ Date Fields (click to collapse)';
+      }
+    });
+    // -------------------------------
+    // Locations Table Logic
+    // -------------------------------
+    function addLocationRow(loc = { name: "", lat: null, lon: null }) {
+      const tr = document.createElement('tr');
+
+      // Name
+      const tdName = document.createElement('td');
+      const nameInput = document.createElement('input');
+      nameInput.type = 'text';
+      nameInput.value = loc.name || '';
+      tdName.appendChild(nameInput);
+
+      // Latitude
+      const tdLat = document.createElement('td');
+      const latInput = document.createElement('input');
+      latInput.type = 'number';
+      latInput.step = '0.000001';
+      latInput.value = loc.lat ?? '';
+      tdLat.appendChild(latInput);
+
+      // Longitude
+      const tdLon = document.createElement('td');
+      const lonInput = document.createElement('input');
+      lonInput.type = 'number';
+      lonInput.step = '0.000001';
+      lonInput.value = loc.lon ?? '';
+      tdLon.appendChild(lonInput);
+
+      // Delete button
+      const tdDelete = document.createElement('td');
+      const delBtn = document.createElement('button');
+      delBtn.textContent = 'X';
+      delBtn.classList.add('danger');
+      delBtn.style.padding = '4px 8px';
+      delBtn.addEventListener('click', () => {
+        tr.remove();
+      });
+      tdDelete.appendChild(delBtn);
+
+      tr.appendChild(tdName);
+      tr.appendChild(tdLat);
+      tr.appendChild(tdLon);
+      tr.appendChild(tdDelete);
+
+      locationsTableBody.appendChild(tr);
+    }
+
+    addLocationBtn.addEventListener('click', () => {
+      addLocationRow();
+    });
+
+    // -------------------------------
+    // Validation Helpers
+    // -------------------------------
+    function isValidLat(lat) {
+      return lat >= -90 && lat <= 90;
+    }
+
+    function isValidLon(lon) {
+      return lon >= -180 && lon <= 180;
+    }
+
+    function isValidISODate(str) {
+      if (!str) return true; // empty allowed → null
+      const isoRegex = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[+-]\d{2}:\d{2}$/;
+      return isoRegex.test(str);
+    }
+
+    function isValidURL(str) {
+      try {
+        new URL(str);
+        return true;
+      } catch {
+        return false;
+      }
+    }
+
+    // -------------------------------
+    // Save Segment Changes
+    // -------------------------------
+    saveSegmentBtn.addEventListener('click', () => {
+      resetStatuses();
+
+      if (currentIndex < 0 || !segments) {
+        editStatus.textContent = 'No segment selected.';
+        editStatus.classList.add('error');
+        return;
+      }
+
+      // -------------------------------
+      // Validate required fields
+      // -------------------------------
+      const type = typeInput.value.trim();
+      const title = titleInput.value.trim();
+
+      if (!type) {
+        editStatus.textContent = 'Segment type is required.';
+        editStatus.classList.add('error');
+        return;
+      }
+      if (!title) {
+        editStatus.textContent = 'Title is required.';
+        editStatus.classList.add('error');
+        return;
+      }
+
+      // -------------------------------
+      // Validate date fields
+      // -------------------------------
+      const startLocal = startLocalInput.value.trim();
+      const endLocal = endLocalInput.value.trim();
+      const departLocal = departLocalInput.value.trim();
+      const arriveLocal = arriveLocalInput.value.trim();
+      const checkInLocal = checkInLocalInput.value.trim();
+      const checkOutLocal = checkOutLocalInput.value.trim();
+
+      const dateFields = [
+        { name: 'startLocal', value: startLocal },
+        { name: 'endLocal', value: endLocal },
+        { name: 'departLocal', value: departLocal },
+        { name: 'arriveLocal', value: arriveLocal },
+        { name: 'checkInLocal', value: checkInLocal },
+        { name: 'checkOutLocal', value: checkOutLocal }
+      ];
+
+      for (const df of dateFields) {
+        if (df.value && !isValidISODate(df.value)) {
+          editStatus.textContent = `Invalid ISO-8601 date format in ${df.name}.`;
+          editStatus.classList.add('error');
+          return;
+        }
+      }
+
+      // -------------------------------
+      // Validate locations
+      // -------------------------------
+      const locationRows = Array.from(locationsTableBody.querySelectorAll('tr'));
+      if (locationRows.length === 0) {
+        editStatus.textContent = 'At least one location is required.';
+        editStatus.classList.add('error');
+        return;
+      }
+
+      const locations = [];
+      for (const row of locationRows) {
+        const inputs = row.querySelectorAll('input');
+        const name = inputs[0].value.trim();
+        const latStr = inputs[1].value.trim();
+        const lonStr = inputs[2].value.trim();
+
+        if (!name) {
+          editStatus.textContent = 'Location name is required.';
+          editStatus.classList.add('error');
+          return;
+        }
+
+        const lat = latStr === '' ? null : parseFloat(latStr);
+        const lon = lonStr === '' ? null : parseFloat(lonStr);
+
+        if (lat === null || lon === null) {
+          editStatus.textContent = 'Latitude and longitude are required.';
+          editStatus.classList.add('error');
+          return;
+        }
+
+        if (!isValidLat(lat)) {
+          editStatus.textContent = `Invalid latitude: ${lat}`;
+          editStatus.classList.add('error');
+          return;
+        }
+        if (!isValidLon(lon)) {
+          editStatus.textContent = `Invalid longitude: ${lon}`;
+          editStatus.classList.add('error');
+          return;
+        }
+
+        locations.push({ name, lat, lon });
+      }
+
+      // -------------------------------
+      // Notes (array)
+      // -------------------------------
+      const notesRaw = notesInput.value.trim();
+      const notes = notesRaw === '' ? [] : notesRaw.split('\n').map(s => s.trim());
+
+      // -------------------------------
+      // Comment (string or null)
+      // -------------------------------
+      const commentRaw = commentInput.value.trim();
+      const comment = commentRaw === '' ? null : commentRaw;
+
+      // -------------------------------
+      // Links (array)
+      // -------------------------------
+      const linksRaw = linksInput.value.trim();
+      let links = [];
+      if (linksRaw !== '') {
+        links = linksRaw.split(',').map(s => s.trim()).filter(s => s.length > 0);
+        for (const url of links) {
+          if (!isValidURL(url)) {
+            editStatus.textContent = `Invalid URL in links: ${url}`;
+            editStatus.classList.add('error');
+            return;
+          }
+        }
+      }
+
+      // -------------------------------
+      // Images (array)
+      // -------------------------------
+      const imagesRaw = imagesInput.value.trim();
+      let images = [];
+      if (imagesRaw !== '') {
+        images = imagesRaw.split(',').map(s => s.trim()).filter(s => s.length > 0);
+      }
+
+      // -------------------------------
+      // Build updated segment object
+      // -------------------------------
+      const updated = {
+        ...segments[currentIndex],
+        type,
+        title,
+        startLocal: startLocal === '' ? null : startLocal,
+        endLocal: endLocal === '' ? null : endLocal,
+        departLocal: departLocal === '' ? null : departLocal,
+        arriveLocal: arriveLocal === '' ? null : arriveLocal,
+        checkInLocal: checkInLocal === '' ? null : checkInLocal,
+        checkOutLocal: checkOutLocal === '' ? null : checkOutLocal,
+        locations,
+        notes,
+        comment,
+        links,
+        images
+      };
+
+      segments[currentIndex] = updated;
+      editStatus.textContent = 'Segment updated successfully.';
+    });
+    // -------------------------------
+    // Add New Segment
+    // -------------------------------
     newSegmentBtn.addEventListener('click', () => {
       resetStatuses();
+
       if (!segments) {
         segmentStatus.textContent = 'Load a JSON file first.';
         segmentStatus.classList.add('error');
@@ -325,136 +706,75 @@
       }
 
       const newSeg = {
-        type: '',
-        title: '',
-        date: '',
-        locations: [
-          {
-            name: '',
-            lat: 0,
-            lon: 0
-          }
-        ],
-        notes: '',
+        type: "",
+        title: "",
+        startLocal: null,
+        endLocal: null,
+        departLocal: null,
+        arriveLocal: null,
+        checkInLocal: null,
+        checkOutLocal: null,
+        locations: [],
+        notes: [],
+        comment: null,
         links: [],
         images: []
       };
 
       segments.push(newSeg);
       populateSegmentSelect();
-      segmentSelect.value = String(segments.length - 1);
+      segmentSelect.value = segments.length - 1;
       currentIndex = segments.length - 1;
       loadSegmentIntoForm();
-      segmentStatus.textContent = `New segment created at index ${currentIndex}.`;
+
+      segmentStatus.textContent = 'New segment added.';
     });
 
+    // -------------------------------
+    // Delete Segment
+    // -------------------------------
     deleteSegmentBtn.addEventListener('click', () => {
       resetStatuses();
-      if (!segments) {
-        segmentStatus.textContent = 'Load a JSON file first.';
-        segmentStatus.classList.add('error');
-        return;
-      }
-      if (currentIndex < 0 || currentIndex >= segments.length) {
+
+      if (currentIndex < 0 || !segments) {
         segmentStatus.textContent = 'No segment selected.';
         segmentStatus.classList.add('error');
         return;
       }
-      if (!confirm(`Delete segment ${currentIndex}? This cannot be undone here.`)) {
+
+      if (!confirm('Delete this segment? This cannot be undone.')) {
         return;
       }
+
       segments.splice(currentIndex, 1);
       populateSegmentSelect();
       segmentStatus.textContent = 'Segment deleted.';
     });
 
-    saveSegmentBtn.addEventListener('click', () => {
-      resetStatuses();
-      if (!segments) {
-        editStatus.textContent = 'Load a JSON file first.';
-        editStatus.classList.add('error');
-        return;
-      }
-      if (currentIndex < 0 || currentIndex >= segments.length) {
-        editStatus.textContent = 'No segment selected (or new segment not created).';
-        editStatus.classList.add('error');
-        return;
-      }
-
-      const type = typeInput.value.trim();
-      const title = titleInput.value.trim();
-      const locName = locationNameInput.value.trim();
-      const latVal = latInput.value.trim();
-      const lonVal = lonInput.value.trim();
-
-      if (!type || !title || !locName || !latVal || !lonVal) {
-        editStatus.textContent = 'Type, Title, Location name, Latitude, and Longitude are required.';
-        editStatus.classList.add('error');
-        return;
-      }
-
-      const latNum = Number(latVal);
-      const lonNum = Number(lonVal);
-      if (Number.isNaN(latNum) || Number.isNaN(lonNum)) {
-        editStatus.textContent = 'Latitude and Longitude must be valid numbers.';
-        editStatus.classList.add('error');
-        return;
-      }
-
-      const seg = segments[currentIndex];
-      seg.type = type;
-      seg.title = title;
-      seg.date = dateInput.value || '';
-
-      seg.locations = [
-        {
-          name: locName,
-          lat: latNum,
-          lon: lonNum
-        }
-      ];
-
-      seg.notes = notesInput.value.trim() || '';
-
-      const linksRaw = linksInput.value.trim();
-      seg.links = linksRaw
-        ? linksRaw.split(',').map(s => s.trim()).filter(Boolean)
-        : [];
-
-      const imagesRaw = imagesInput.value.trim();
-      seg.images = imagesRaw
-        ? imagesRaw.split(',').map(s => s.trim()).filter(Boolean)
-        : [];
-
-      populateSegmentSelect();
-      segmentSelect.value = String(currentIndex);
-      editStatus.textContent = 'Segment saved successfully.';
-    });
-
+    // -------------------------------
+    // Download Updated JSON
+    // -------------------------------
     downloadBtn.addEventListener('click', () => {
       resetStatuses();
+
       if (!jsonData) {
-        editStatus.textContent = 'Load a JSON file first.';
-        editStatus.classList.add('error');
+        segmentStatus.textContent = 'No JSON loaded.';
+        segmentStatus.classList.add('error');
         return;
       }
-      try {
-        const jsonStr = JSON.stringify(jsonData, null, 2);
-        const blob = new Blob([jsonStr], { type: 'application/json' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'balkans-2026.json';
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-        editStatus.textContent = 'Downloaded updated balkans-2026.json.';
-      } catch (err) {
-        editStatus.textContent = 'Error generating JSON: ' + err.message;
-        editStatus.classList.add('error');
-      }
+
+      const jsonStr = JSON.stringify(jsonData, null, 2);
+      const blob = new Blob([jsonStr], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'balkans-2026.json';
+      a.click();
+
+      URL.revokeObjectURL(url);
     });
+
   </script>
 </body>
 </html>
