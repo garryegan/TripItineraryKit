@@ -1,780 +1,845 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>TripItineraryKit Segment Editor</title>
+  <meta charset="UTF-8">
+  <title>Trip Segment Editor (Schema-Locked)</title>
+
   <style>
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      margin: 20px;
-      background: #f5f5f7;
-      color: #222;
+      font-family: system-ui, sans-serif;
+      margin: 0;
+      display: flex;
+      height: 100vh;
     }
-    h1 {
-      margin-bottom: 0.2rem;
+
+    #sidebar {
+      width: 280px;
+      border-right: 1px solid #ccc;
+      padding: 10px;
+      box-sizing: border-box;
+      overflow-y: auto;
     }
-    .panel {
-      background: #fff;
-      border-radius: 8px;
-      padding: 16px;
-      margin-bottom: 16px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+
+    #main {
+      flex: 1;
+      padding: 10px;
+      box-sizing: border-box;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
     }
+
+    h1 { font-size: 18px; margin: 0 0 8px; }
+    h2 { font-size: 15px; margin: 10px 0 6px; }
+
     label {
+      font-size: 12px;
       display: block;
-      margin-top: 8px;
-      font-weight: 600;
+      margin-top: 6px;
+      margin-bottom: 2px;
     }
+
     input[type="text"],
     input[type="number"],
-    input[type="date"],
     textarea,
     select {
       width: 100%;
-      padding: 6px 8px;
-      margin-top: 4px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
       box-sizing: border-box;
-      font-family: inherit;
-      font-size: 14px;
+      font-size: 13px;
+      padding: 4px 6px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      text-align: left;
     }
+
     textarea {
-      min-height: 60px;
+      min-height: 4em;
+      max-height: 4em;
       resize: vertical;
     }
+
+    .segment-item {
+      padding: 4px 6px;
+      margin-bottom: 3px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 12px;
+      border: 1px solid transparent;
+    }
+
+    .segment-item:hover { background: #f3f3f3; }
+    .segment-item.active { border-color: #0078d4; background: #e6f2ff; }
+
+    #form-container {
+      flex: 1;
+      overflow-y: auto;
+      padding-right: 6px;
+    }
+
+    /* NEW LAYOUT SYSTEM */
     .row {
       display: flex;
       gap: 12px;
+      margin-bottom: 10px;
+      flex-wrap: nowrap;
     }
-    .col {
-      flex: 1;
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
     }
-    button {
-      padding: 8px 14px;
+
+    /* FIXED WIDTHS */
+    .w-distance { width: 90px; }
+    .w-provider { width: 360px; }
+    .w-dayno { width: 60px; }
+
+    .w-date { width: 260px; }
+
+    .w-website { width: 200px; }
+    .w-phone { width: 160px; }
+    .w-address { flex: 1; min-width: 260px; }
+
+    .w-amount { width: 140px; }
+    .w-currency { width: 90px; }
+    .w-rate { width: 120px; }
+    .w-rate-src { width: 260px; }
+
+    .notes-full {
+      width: 100%;
+      min-height: 60px;
+      resize: vertical;
+    }
+
+    .segment-group {
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-top: 12px;
       border-radius: 4px;
-      border: none;
-      cursor: pointer;
+    }
+
+    .segment-group h3 {
+      margin: 0 0 8px;
       font-size: 14px;
-      margin-right: 8px;
+      font-weight: bold;
     }
-    button.primary {
-      background: #2563eb;
-      color: #fff;
-    }
-    button.secondary {
-      background: #e5e7eb;
-      color: #111827;
-    }
-    button.danger {
-      background: #dc2626;
-      color: #fff;
-    }
-    .status {
-      margin-top: 8px;
-      font-size: 13px;
-      color: #4b5563;
-    }
-    .status.error {
-      color: #b91c1c;
-    }
-    .small {
-      font-size: 12px;
-      color: #6b7280;
-    }
+
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 10px;
+      font-size: 12px;
+      margin-top: 4px;
     }
-    table th, table td {
-      border: 1px solid #ddd;
-      padding: 6px;
-      text-align: left;
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 3px 4px;
     }
-    table th {
-      background: #f0f0f0;
-    }
-    .collapse-header {
-      cursor: pointer;
-      font-weight: 600;
-      margin-top: 12px;
-      padding: 6px;
-      background: #e5e7eb;
-      border-radius: 4px;
-    }
-    .collapse-content {
-      display: none;
+
+    #bottom-bar {
       margin-top: 8px;
-      padding: 10px;
-      background: #fafafa;
-      border-radius: 4px;
-      border: 1px solid #ddd;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    button {
+      padding: 5px 10px;
+      font-size: 13px;
+      border-radius: 3px;
+      border: 1px solid #0078d4;
+      background: #0078d4;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    button.secondary {
+      background: #f3f3f3;
+      color: #222;
+      border-color: #ccc;
+    }
+
+    button:disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+
+    #status {
+      font-size: 12px;
+      margin-top: 4px;
     }
   </style>
 </head>
 
 <body>
-  <h1>TripItineraryKit Segment Editor</h1>
-  <p class="small">
-    Local form tool for editing <code>balkans-2026.json</code> without breaking JSON structure.
-  </p>
+  <div id="sidebar">
+    <h1>Segments</h1>
 
-  <div class="panel">
-    <h2>1. Load JSON file</h2>
-    <input type="file" id="fileInput" accept=".json" />
-    <div id="loadStatus" class="status"></div>
+    <label>Load JSON file</label>
+    <input type="file" id="file-input" accept=".json">
+
+    <button id="download-json" class="secondary" disabled>
+      Download updated JSON
+    </button>
+
+    <div id="status">No file loaded.</div>
+
+    <h2>List</h2>
+
+    <button id="new-segment" class="secondary">Add new segment</button>
+
+    <div id="segment-list"></div>
   </div>
 
-  <div class="panel">
-    <h2>2. Select or create segment</h2>
-    <label for="segmentSelect">Segments</label>
-    <select id="segmentSelect">
-      <option value="">-- No file loaded --</option>
-    </select>
-    <div style="margin-top:8px;">
-      <button id="newSegmentBtn" class="secondary">Add New Segment</button>
-      <button id="deleteSegmentBtn" class="danger">Delete Selected Segment</button>
-    </div>
-    <div id="segmentStatus" class="status"></div>
+  <div id="main">
+    <h1>Segment editor (schema-locked)</h1>
+
+    <div id="form-container">
+      <form id="segment-form">
+
+        <!-- ========================= -->
+        <!-- SECTION: BASIC INFO -->
+        <!-- ========================= -->
+
+        <div class="row">
+          <div class="field" style="flex:1;">
+            <label>Type</label>
+            <input list="type-list" id="f-type">
+            <datalist id="type-list">
+              <option value="flight">
+              <option value="layover">
+              <option value="accommodation">
+              <option value="transport">
+              <option value="tour">
+              <option value="activity">
+              <option value="restaurant">
+              <option value="car-rental">
+              <option value="free-day">
+              <option value="note">
+              <option value="default">
+            </datalist>
+          </div>
+
+          <div class="field" style="flex:1;">
+            <label>Title</label>
+            <input type="text" id="f-title">
+          </div>
+
+          <div class="field" style="flex:1;">
+            <label>Description</label>
+            <textarea id="f-description"></textarea>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field" style="flex:1;">
+            <label>From</label>
+            <input type="text" id="f-from">
+          </div>
+
+          <div class="field" style="flex:1;">
+            <label>To</label>
+            <input type="text" id="f-to">
+          </div>
+        </div>
+
+        <!-- ========================= -->
+        <!-- SECTION: FLIGHT DETAILS -->
+        <!-- ========================= -->
+
+        <div class="segment-group">
+          <h3>Flight details</h3>
+
+          <!-- Distance + Provider + Day Number -->
+          <div class="row">
+            <div class="field w-distance">
+              <label>Distance (#,###)</label>
+              <input type="text" id="f-distanceKm">
+            </div>
+
+            <div class="field w-provider">
+              <label>Provider (≤40 chars)</label>
+              <input type="text" id="f-provider-name">
+            </div>
+
+            <div class="field w-dayno">
+              <label>Day No.</label>
+              <input type="text" id="f-provider-dayNumber">
+            </div>
+          </div>
+
+<!-- ALL SIX DATES IN ONE ROW -->
+<div class="row" style="flex-wrap: nowrap;">
+  <div class="field w-date">
+    <label>Depart Local</label>
+    <input type="text" id="f-departLocal">
   </div>
 
-  <div class="panel">
-    <h2>3. Edit segment fields</h2>
-
-    <label for="typeInput">Segment Type</label>
-    <select id="typeInput">
-      <option value="">-- Select Type --</option>
-      <option value="flight">flight</option>
-      <option value="layover">layover</option>
-      <option value="accommodation">accommodation</option>
-      <option value="transport">transport</option>
-      <option value="tour">tour</option>
-      <option value="activity">activity</option>
-      <option value="restaurant">restaurant</option>
-      <option value="car-rental">car-rental</option>
-      <option value="free-day">free-day</option>
-      <option value="note">note</option>
-      <option value="default">default</option>
-    </select>
-
-    <label for="titleInput">Title</label>
-    <input type="text" id="titleInput" placeholder="e.g. Konoba Portun" />
-
-    <!-- Collapsible Date Fields -->
-    <div class="collapse-header" id="dateCollapseHeader">▼ Date Fields (click to expand)</div>
-    <div class="collapse-content" id="dateCollapse">
-      <label>startLocal</label>
-      <input type="text" id="startLocalInput" placeholder="2026-05-05T05:45:00+03:00" />
-
-      <label>endLocal</label>
-      <input type="text" id="endLocalInput" placeholder="2026-05-05T07:15:00+03:00" />
-
-      <label>departLocal</label>
-      <input type="text" id="departLocalInput" placeholder="2026-05-05T05:45:00+03:00" />
-
-      <label>arriveLocal</label>
-      <input type="text" id="arriveLocalInput" placeholder="2026-05-05T07:15:00+03:00" />
-
-      <label>checkInLocal</label>
-      <input type="text" id="checkInLocalInput" placeholder="2026-05-21T15:00:00+02:00" />
-
-      <label>checkOutLocal</label>
-      <input type="text" id="checkOutLocalInput" placeholder="2026-05-23T11:00:00+02:00" />
-    </div>
-
-    <h3>Locations</h3>
-    <table id="locationsTable">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Latitude</th>
-          <th>Longitude</th>
-          <th>Delete</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-    <button id="addLocationBtn" class="secondary" style="margin-top:10px;">Add Location</button>
-
-    <label for="notesInput">Notes (each line becomes an array item)</label>
-    <textarea id="notesInput" placeholder="Line 1&#10;Line 2"></textarea>
-
-    <label for="commentInput">Comment (optional)</label>
-    <input type="text" id="commentInput" placeholder="Summary comment" />
-
-    <label for="linksInput">Links (comma-separated URLs)</label>
-    <input type="text" id="linksInput" placeholder="https://..., https://..." />
-
-    <label for="imagesInput">Images (comma-separated URLs or paths)</label>
-    <input type="text" id="imagesInput" placeholder="/images/photo.jpg, https://..." />
-
-    <div style="margin-top:12px;">
-      <button id="saveSegmentBtn" class="primary">Save Segment Changes</button>
-    </div>
-    <div id="editStatus" class="status"></div>
+  <div class="field w-date">
+    <label>Depart UTC</label>
+    <input type="text" id="f-startLocal">
   </div>
 
-  <div class="panel">
-    <h2>4. Download updated JSON</h2>
-    <button id="downloadBtn" class="primary">Download balkans-2026.json</button>
-    <div class="status small">
-      After downloading, replace the file in your project:
-      <br />
-      <code>C:\Projects\TripItineraryKit\src\lib\data\balkans-2026.json</code>
-    </div>
+  <div class="field w-date">
+    <label>Arrive Local</label>
+    <input type="text" id="f-arriveLocal">
   </div>
 
+  <div class="field w-date">
+    <label>Arrive UTC</label>
+    <input type="text" id="f-endLocal">
+  </div>
+
+  <div class="field w-date">
+    <label>Return Local</label>
+    <input type="text" id="f-checkInLocal">
+  </div>
+
+  <div class="field w-date">
+    <label>Return UTC</label>
+    <input type="text" id="f-checkOutLocal">
+  </div>
+</div>
+
+
+          <!-- Website + Phone + Address -->
+          <div class="row">
+            <div class="field w-website">
+              <label>Website</label>
+              <input type="text" id="f-website">
+            </div>
+
+            <div class="field w-phone">
+              <label>Phone</label>
+              <input type="text" id="f-phone">
+            </div>
+
+            <div class="field w-address">
+              <label>Address</label>
+              <textarea id="f-address"></textarea>
+            </div>
+          </div>
+        </div>
+        <!-- ========================= -->
+        <!-- SECTION: NOTES + BOOKING REFS -->
+        <!-- ========================= -->
+
+        <div class="row">
+          <div class="field" style="flex:1;">
+            <label>Notes (one line per array element)</label>
+            <textarea id="f-notes"></textarea>
+          </div>
+
+          <div class="field" style="flex:1;">
+            <label>Booking refs (one line per array element)</label>
+            <textarea id="f-bookingRefs"></textarea>
+          </div>
+        </div>
+
+        <!-- ========================= -->
+        <!-- SECTION: CONFIRMATION -->
+        <!-- ========================= -->
+
+        <div class="row">
+          <div class="field" style="flex:1;">
+            <label>Confirmation</label>
+            <input type="text" id="f-confirmation">
+          </div>
+        </div>
+
+        <!-- ========================= -->
+        <!-- SECTION: LOCATIONS -->
+        <!-- ========================= -->
+
+        <div class="segment-group">
+          <h3>Locations</h3>
+
+          <button type="button" id="add-location-row" class="secondary">
+            Add location
+          </button>
+
+          <table id="locations-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Lat</th>
+                <th>Lon</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <!-- ========================= -->
+        <!-- SECTION: ATTACHMENTS -->
+        <!-- ========================= -->
+
+        <div class="row">
+          <div class="field" style="flex:1;">
+            <label>Attachments (one line per array element)</label>
+            <textarea id="f-attachments"></textarea>
+          </div>
+        </div>
+
+        <!-- ========================= -->
+        <!-- SECTION: COST -->
+        <!-- ========================= -->
+
+        <div class="segment-group">
+          <h3>Cost</h3>
+
+          <!-- Incurred Date -->
+          <div class="row">
+            <div class="field w-date">
+              <label>Incurred Date (ISO‑8601)</label>
+              <input type="text" id="f-cost-incurredDate">
+            </div>
+          </div>
+
+          <!-- Local Amount + Currency -->
+          <div class="row">
+            <div class="field w-amount">
+              <label>Local Amount (##,###.##)</label>
+              <input type="text" id="f-cost-local-amount">
+            </div>
+
+            <div class="field w-currency">
+              <label>Local Currency</label>
+              <input type="text" id="f-cost-local-currency">
+            </div>
+          </div>
+
+          <!-- AUD Amount + Rate + Source -->
+          <div class="row">
+            <div class="field w-amount">
+              <label>AUD Amount (##,###.##)</label>
+              <input type="text" id="f-cost-aud-amount">
+            </div>
+
+            <div class="field w-rate">
+              <label>Forex Rate (8 digits)</label>
+              <input type="text" id="f-cost-aud-rateUsed">
+            </div>
+
+            <div class="field w-rate-src">
+              <label>Forex Rate Source (≤30 chars)</label>
+              <input type="text" id="f-cost-aud-source">
+            </div>
+          </div>
+
+          <!-- Cost Notes -->
+          <div class="row">
+            <div class="field" style="flex:1;">
+              <label>Cost Notes</label>
+              <textarea id="f-cost-costNotes" class="notes-full"></textarea>
+            </div>
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+    <div id="bottom-bar">
+      <button id="apply-segment" disabled>Apply changes to segment</button>
+      <button id="download-json-main" class="secondary" disabled>
+        Download updated JSON
+      </button>
+    </div>
+  </div>
   <script>
-    // -------------------------------
-    // Core Data Structures
-    // -------------------------------
-    let jsonData = null;        // full JSON object
-    let segments = null;        // reference to jsonData.segments
-    let currentIndex = -1;      // selected segment index
+    let data = null;
+    let currentIndex = null;
 
-    // -------------------------------
-    // DOM Elements
-    // -------------------------------
-    const fileInput = document.getElementById('fileInput');
-    const loadStatus = document.getElementById('loadStatus');
-    const segmentSelect = document.getElementById('segmentSelect');
-    const segmentStatus = document.getElementById('segmentStatus');
-    const editStatus = document.getElementById('editStatus');
+    const fileInput = document.getElementById('file-input');
+    const segmentListEl = document.getElementById('segment-list');
+    const statusEl = document.getElementById('status');
+    const downloadSidebarBtn = document.getElementById('download-json');
+    const downloadMainBtn = document.getElementById('download-json-main');
+    const applyBtn = document.getElementById('apply-segment');
+    const newSegmentBtn = document.getElementById('new-segment');
+    const addLocBtn = document.getElementById('add-location-row');
 
-    const typeInput = document.getElementById('typeInput');
-    const titleInput = document.getElementById('titleInput');
+    const f = {
+      type: document.getElementById('f-type'),
+      title: document.getElementById('f-title'),
+      description: document.getElementById('f-description'),
+      from: document.getElementById('f-from'),
+      to: document.getElementById('f-to'),
+      departLocal: document.getElementById('f-departLocal'),
+      arriveLocal: document.getElementById('f-arriveLocal'),
+      startLocal: document.getElementById('f-startLocal'),
+      endLocal: document.getElementById('f-endLocal'),
+      checkInLocal: document.getElementById('f-checkInLocal'),
+      checkOutLocal: document.getElementById('f-checkOutLocal'),
+      distanceKm: document.getElementById('f-distanceKm'),
+      providerName: document.getElementById('f-provider-name'),
+      providerDayNumber: document.getElementById('f-provider-dayNumber'),
+      notes: document.getElementById('f-notes'),
+      bookingRefs: document.getElementById('f-bookingRefs'),
+      confirmation: document.getElementById('f-confirmation'),
+      website: document.getElementById('f-website'),
+      phone: document.getElementById('f-phone'),
+      address: document.getElementById('f-address'),
+      locationsTableBody: document.querySelector('#locations-table tbody'),
+      attachments: document.getElementById('f-attachments'),
+      costIncurredDate: document.getElementById('f-cost-incurredDate'),
+      costLocalAmount: document.getElementById('f-cost-local-amount'),
+      costLocalCurrency: document.getElementById('f-cost-local-currency'),
+      costAudAmount: document.getElementById('f-cost-aud-amount'),
+      costAudRateUsed: document.getElementById('f-cost-aud-rateUsed'),
+      costAudSource: document.getElementById('f-cost-aud-source'),
+      costCostNotes: document.getElementById('f-cost-costNotes')
+    };
 
-    // Date fields
-    const dateCollapseHeader = document.getElementById('dateCollapseHeader');
-    const dateCollapse = document.getElementById('dateCollapse');
-    const startLocalInput = document.getElementById('startLocalInput');
-    const endLocalInput = document.getElementById('endLocalInput');
-    const departLocalInput = document.getElementById('departLocalInput');
-    const arriveLocalInput = document.getElementById('arriveLocalInput');
-    const checkInLocalInput = document.getElementById('checkInLocalInput');
-    const checkOutLocalInput = document.getElementById('checkOutLocalInput');
-
-    // Locations table
-    const locationsTableBody = document.querySelector('#locationsTable tbody');
-    const addLocationBtn = document.getElementById('addLocationBtn');
-
-    // Notes, comment, links, images
-    const notesInput = document.getElementById('notesInput');
-    const commentInput = document.getElementById('commentInput');
-    const linksInput = document.getElementById('linksInput');
-    const imagesInput = document.getElementById('imagesInput');
-
-    const newSegmentBtn = document.getElementById('newSegmentBtn');
-    const deleteSegmentBtn = document.getElementById('deleteSegmentBtn');
-    const saveSegmentBtn = document.getElementById('saveSegmentBtn');
-    const downloadBtn = document.getElementById('downloadBtn');
-
-    // -------------------------------
-    // Utility: Reset status messages
-    // -------------------------------
-    function resetStatuses() {
-      loadStatus.textContent = '';
-      segmentStatus.textContent = '';
-      editStatus.textContent = '';
-      loadStatus.classList.remove('error');
-      segmentStatus.classList.remove('error');
-      editStatus.classList.remove('error');
+    function setStatus(msg) {
+      statusEl.textContent = msg;
     }
 
-    // -------------------------------
-    // Load JSON File
-    // -------------------------------
-    fileInput.addEventListener('change', (e) => {
-      resetStatuses();
+    fileInput.addEventListener('change', e => {
       const file = e.target.files[0];
       if (!file) return;
 
       const reader = new FileReader();
-      reader.onload = (event) => {
+      reader.onload = ev => {
         try {
-          jsonData = JSON.parse(event.target.result);
-
-          if (!Array.isArray(jsonData.segments)) {
-            throw new Error("JSON does not contain a 'segments' array.");
+          const parsed = JSON.parse(ev.target.result);
+          if (!parsed || !Array.isArray(parsed.segments)) {
+            setStatus('JSON must have a top-level "segments" array.');
+            return;
           }
 
-          segments = jsonData.segments;
-          populateSegmentSelect();
-          loadStatus.textContent = `Loaded ${file.name} with ${segments.length} segments.`;
+          data = parsed;
+          currentIndex = null;
+          buildSegmentList();
+          setStatus(`Loaded ${file.name} with ${data.segments.length} segments.`);
+          downloadSidebarBtn.disabled = false;
+          downloadMainBtn.disabled = false;
+          applyBtn.disabled = true;
+          clearForm();
 
         } catch (err) {
-          jsonData = null;
-          segments = null;
-          segmentSelect.innerHTML = '<option value="">-- Error loading file --</option>';
-          loadStatus.textContent = 'Error: ' + err.message;
-          loadStatus.classList.add('error');
+          console.error(err);
+          setStatus('Error parsing JSON.');
         }
       };
 
       reader.readAsText(file);
     });
 
-    // -------------------------------
-    // Populate Segment Dropdown
-    // -------------------------------
-    function populateSegmentSelect() {
-      segmentSelect.innerHTML = '';
+    function buildSegmentList() {
+      segmentListEl.innerHTML = '';
+      if (!data) return;
 
-      if (!segments || segments.length === 0) {
-        const opt = document.createElement('option');
-        opt.value = '';
-        opt.textContent = '-- No segments --';
-        segmentSelect.appendChild(opt);
-        currentIndex = -1;
-        clearForm();
-        return;
-      }
-
-      const placeholder = document.createElement('option');
-      placeholder.value = '';
-      placeholder.textContent = '-- Select a segment --';
-      segmentSelect.appendChild(placeholder);
-
-      segments.forEach((seg, index) => {
-        const opt = document.createElement('option');
-        const title = seg.title || '(no title)';
-        const type = seg.type || '(no type)';
-        opt.value = index;
-        opt.textContent = `${index}: [${type}] ${title}`;
-        segmentSelect.appendChild(opt);
+      data.segments.forEach((seg, idx) => {
+        const div = document.createElement('div');
+        div.className = 'segment-item' + (idx === currentIndex ? ' active' : '');
+        const t = seg.title || '(no title)';
+        const ty = seg.type || '(no type)';
+        div.textContent = `${idx + 1}. [${ty}] ${t}`;
+        div.addEventListener('click', () => selectSegment(idx));
+        segmentListEl.appendChild(div);
       });
-
-      currentIndex = -1;
-      clearForm();
     }
 
-    // -------------------------------
-    // Clear Form
-    // -------------------------------
     function clearForm() {
-      typeInput.value = '';
-      titleInput.value = '';
-
-      startLocalInput.value = '';
-      endLocalInput.value = '';
-      departLocalInput.value = '';
-      arriveLocalInput.value = '';
-      checkInLocalInput.value = '';
-      checkOutLocalInput.value = '';
-
-      locationsTableBody.innerHTML = '';
-
-      notesInput.value = '';
-      commentInput.value = '';
-      linksInput.value = '';
-      imagesInput.value = '';
-    }
-
-    // -------------------------------
-    // Handle Segment Selection
-    // -------------------------------
-    segmentSelect.addEventListener('change', () => {
-      resetStatuses();
-      const value = segmentSelect.value;
-
-      if (value === '') {
-        currentIndex = -1;
-        clearForm();
-        return;
-      }
-
-      currentIndex = parseInt(value, 10);
-      loadSegmentIntoForm();
-    });
-
-    // -------------------------------
-    // Load Segment Into Form
-    // -------------------------------
-    function loadSegmentIntoForm() {
-      if (!segments || currentIndex < 0 || currentIndex >= segments.length) {
-        clearForm();
-        return;
-      }
-
-      const seg = segments[currentIndex];
-
-      typeInput.value = seg.type || '';
-      titleInput.value = seg.title || '';
-
-      // Date fields (null → empty string)
-      startLocalInput.value = seg.startLocal || '';
-      endLocalInput.value = seg.endLocal || '';
-      departLocalInput.value = seg.departLocal || '';
-      arriveLocalInput.value = seg.arriveLocal || '';
-      checkInLocalInput.value = seg.checkInLocal || '';
-      checkOutLocalInput.value = seg.checkOutLocal || '';
-
-      // Locations
-      locationsTableBody.innerHTML = '';
-      if (Array.isArray(seg.locations)) {
-        seg.locations.forEach((loc) => addLocationRow(loc));
-      }
-
-      // Notes array → textarea
-      if (Array.isArray(seg.notes)) {
-        notesInput.value = seg.notes.join('\n');
-      } else {
-        notesInput.value = '';
-      }
-
-      // Comment string
-      commentInput.value = seg.comment || '';
-
-      // Links
-      if (Array.isArray(seg.links)) {
-        linksInput.value = seg.links.join(', ');
-      } else {
-        linksInput.value = '';
-      }
-
-      // Images
-      if (Array.isArray(seg.images)) {
-        imagesInput.value = seg.images.join(', ');
-      } else {
-        imagesInput.value = '';
-      }
-    }
-
-    // -------------------------------
-    // Collapsible Date Fields
-    // -------------------------------
-    dateCollapseHeader.addEventListener('click', () => {
-      if (dateCollapse.style.display === 'block') {
-        dateCollapse.style.display = 'none';
-        dateCollapseHeader.textContent = '▼ Date Fields (click to expand)';
-      } else {
-        dateCollapse.style.display = 'block';
-        dateCollapseHeader.textContent = '▲ Date Fields (click to collapse)';
-      }
-    });
-    // -------------------------------
-    // Locations Table Logic
-    // -------------------------------
-    function addLocationRow(loc = { name: "", lat: null, lon: null }) {
-      const tr = document.createElement('tr');
-
-      // Name
-      const tdName = document.createElement('td');
-      const nameInput = document.createElement('input');
-      nameInput.type = 'text';
-      nameInput.value = loc.name || '';
-      tdName.appendChild(nameInput);
-
-      // Latitude
-      const tdLat = document.createElement('td');
-      const latInput = document.createElement('input');
-      latInput.type = 'number';
-      latInput.step = '0.000001';
-      latInput.value = loc.lat ?? '';
-      tdLat.appendChild(latInput);
-
-      // Longitude
-      const tdLon = document.createElement('td');
-      const lonInput = document.createElement('input');
-      lonInput.type = 'number';
-      lonInput.step = '0.000001';
-      lonInput.value = loc.lon ?? '';
-      tdLon.appendChild(lonInput);
-
-      // Delete button
-      const tdDelete = document.createElement('td');
-      const delBtn = document.createElement('button');
-      delBtn.textContent = 'X';
-      delBtn.classList.add('danger');
-      delBtn.style.padding = '4px 8px';
-      delBtn.addEventListener('click', () => {
-        tr.remove();
+      Object.values(f).forEach(el => {
+        if (el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement) {
+          el.value = '';
+        }
       });
-      tdDelete.appendChild(delBtn);
-
-      tr.appendChild(tdName);
-      tr.appendChild(tdLat);
-      tr.appendChild(tdLon);
-      tr.appendChild(tdDelete);
-
-      locationsTableBody.appendChild(tr);
+      f.locationsTableBody.innerHTML = '';
     }
 
-    addLocationBtn.addEventListener('click', () => {
-      addLocationRow();
-    });
+    function selectSegment(index) {
+      if (!data) return;
+      if (index < 0 || index >= data.segments.length) return;
 
-    // -------------------------------
-    // Validation Helpers
-    // -------------------------------
-    function isValidLat(lat) {
-      return lat >= -90 && lat <= 90;
+      currentIndex = index;
+      buildSegmentList();
+      populateForm(data.segments[index]);
+      applyBtn.disabled = false;
     }
 
-    function isValidLon(lon) {
-      return lon >= -180 && lon <= 180;
+    function populateForm(seg) {
+      clearForm();
+
+      f.type.value = seg.type ?? '';
+      f.title.value = seg.title ?? '';
+      f.description.value = seg.description ?? '';
+      f.from.value = seg.from ?? '';
+      f.to.value = seg.to ?? '';
+      f.departLocal.value = seg.departLocal ?? '';
+      f.arriveLocal.value = seg.arriveLocal ?? '';
+      f.startLocal.value = seg.startLocal ?? '';
+      f.endLocal.value = seg.endLocal ?? '';
+      f.checkInLocal.value = seg.checkInLocal ?? '';
+      f.checkOutLocal.value = seg.checkOutLocal ?? '';
+      f.distanceKm.value = seg.distanceKm ?? '';
+
+      const provider = seg.provider || {};
+      f.providerName.value = provider.name ?? '';
+      f.providerDayNumber.value = provider.dayNumber ?? '';
+
+      f.notes.value = Array.isArray(seg.notes) ? seg.notes.join('\n') : '';
+      f.bookingRefs.value = Array.isArray(seg.bookingRefs) ? seg.bookingRefs.join('\n') : '';
+
+      f.confirmation.value = seg.confirmation ?? '';
+      f.website.value = seg.website ?? '';
+      f.phone.value = seg.phone ?? '';
+      f.address.value = seg.address ?? '';
+
+      const locs = Array.isArray(seg.locations) ? seg.locations : [];
+      f.locationsTableBody.innerHTML = '';
+
+      locs.forEach((loc, i) => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td><input type="text" data-loc-index="${i}" data-field="name" value="${loc.name ?? ''}"></td>
+          <td><input type="number" step="0.000001" data-loc-index="${i}" data-field="lat" value="${loc.lat ?? ''}"></td>
+          <td><input type="number" step="0.000001" data-loc-index="${i}" data-field="lon" value="${loc.lon ?? ''}"></td>
+          <td><button type="button" class="delete-loc" data-del-index="${i}">X</button></td>
+        `;
+        f.locationsTableBody.appendChild(tr);
+      });
+
+      f.attachments.value = Array.isArray(seg.attachments)
+        ? seg.attachments.join('\n')
+        : '';
+
+      const cost = seg.cost || {};
+      const local = cost.local || {};
+      const aud = cost.aud || {};
+
+      f.costIncurredDate.value = cost.incurredDate ?? '';
+      f.costLocalAmount.value = local.amount ?? '';
+      f.costLocalCurrency.value = local.currency ?? '';
+      f.costAudAmount.value = aud.amount ?? '';
+      f.costAudRateUsed.value = aud.rateUsed ?? '';
+      f.costAudSource.value = aud.source ?? '';
+      f.costCostNotes.value = cost.costNotes ?? '';
     }
 
-    function isValidISODate(str) {
-      if (!str) return true; // empty allowed → null
-      const isoRegex = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[+-]\d{2}:\d{2}$/;
-      return isoRegex.test(str);
+    function textToArray(text) {
+      return text
+        .split('\n')
+        .map(s => s.trim())
+        .filter(s => s.length > 0);
     }
 
-    function isValidURL(str) {
-      try {
-        new URL(str);
-        return true;
-      } catch {
-        return false;
+    function applyChangesToSegment(seg) {
+      const typeVal = f.type.value.trim();
+      if (typeVal === '') {
+        alert('Type is required.');
+        throw new Error('Missing type');
       }
-    }
+      seg.type = typeVal;
 
-    // -------------------------------
-    // Save Segment Changes
-    // -------------------------------
-    saveSegmentBtn.addEventListener('click', () => {
-      resetStatuses();
+      seg.title = f.title.value.trim() || null;
+      seg.description = f.description.value.trim() || null;
+      seg.from = f.from.value.trim() || null;
+      seg.to = f.to.value.trim() || null;
+      seg.departLocal = f.departLocal.value.trim() || null;
+      seg.arriveLocal = f.arriveLocal.value.trim() || null;
+      seg.startLocal = f.startLocal.value.trim() || null;
+      seg.endLocal = f.endLocal.value.trim() || null;
+      seg.checkInLocal = f.checkInLocal.value.trim() || null;
+      seg.checkOutLocal = f.checkOutLocal.value.trim() || null;
 
-      if (currentIndex < 0 || !segments) {
-        editStatus.textContent = 'No segment selected.';
-        editStatus.classList.add('error');
-        return;
-      }
+      const dist = f.distanceKm.value.trim();
+      seg.distanceKm = dist === '' ? null : Number(dist);
 
-      // -------------------------------
-      // Validate required fields
-      // -------------------------------
-      const type = typeInput.value.trim();
-      const title = titleInput.value.trim();
+      seg.provider = seg.provider || {};
+      seg.provider.name = f.providerName.value.trim() || null;
 
-      if (!type) {
-        editStatus.textContent = 'Segment type is required.';
-        editStatus.classList.add('error');
-        return;
-      }
-      if (!title) {
-        editStatus.textContent = 'Title is required.';
-        editStatus.classList.add('error');
-        return;
-      }
+      const dayStr = f.providerDayNumber.value.trim();
+      seg.provider.dayNumber = dayStr === '' ? null : Number(dayStr);
 
-      // -------------------------------
-      // Validate date fields
-      // -------------------------------
-      const startLocal = startLocalInput.value.trim();
-      const endLocal = endLocalInput.value.trim();
-      const departLocal = departLocalInput.value.trim();
-      const arriveLocal = arriveLocalInput.value.trim();
-      const checkInLocal = checkInLocalInput.value.trim();
-      const checkOutLocal = checkOutLocalInput.value.trim();
+      seg.notes = textToArray(f.notes.value);
+      seg.bookingRefs = textToArray(f.bookingRefs.value);
 
-      const dateFields = [
-        { name: 'startLocal', value: startLocal },
-        { name: 'endLocal', value: endLocal },
-        { name: 'departLocal', value: departLocal },
-        { name: 'arriveLocal', value: arriveLocal },
-        { name: 'checkInLocal', value: checkInLocal },
-        { name: 'checkOutLocal', value: checkOutLocal }
-      ];
+      seg.confirmation = f.confirmation.value.trim() || null;
+      seg.website = f.website.value.trim() || null;
+      seg.phone = f.phone.value.trim() || null;
+      seg.address = f.address.value.trim() || null;
 
-      for (const df of dateFields) {
-        if (df.value && !isValidISODate(df.value)) {
-          editStatus.textContent = `Invalid ISO-8601 date format in ${df.name}.`;
-          editStatus.classList.add('error');
-          return;
-        }
-      }
+      const locInputs = f.locationsTableBody.querySelectorAll('input[data-loc-index]');
+      const locMap = {};
 
-      // -------------------------------
-      // Validate locations
-      // -------------------------------
-      const locationRows = Array.from(locationsTableBody.querySelectorAll('tr'));
-      if (locationRows.length === 0) {
-        editStatus.textContent = 'At least one location is required.';
-        editStatus.classList.add('error');
-        return;
-      }
+      locInputs.forEach(inp => {
+        const idx = Number(inp.getAttribute('data-loc-index'));
+        const field = inp.getAttribute('data-field');
+        const val = inp.value.trim();
 
-      const locations = [];
-      for (const row of locationRows) {
-        const inputs = row.querySelectorAll('input');
-        const name = inputs[0].value.trim();
-        const latStr = inputs[1].value.trim();
-        const lonStr = inputs[2].value.trim();
+        locMap[idx] = locMap[idx] || { name: null, lat: null, lon: null };
 
-        if (!name) {
-          editStatus.textContent = 'Location name is required.';
-          editStatus.classList.add('error');
-          return;
+        if (field === 'name') {
+          locMap[idx].name = val || null;
         }
 
-        const lat = latStr === '' ? null : parseFloat(latStr);
-        const lon = lonStr === '' ? null : parseFloat(lonStr);
-
-        if (lat === null || lon === null) {
-          editStatus.textContent = 'Latitude and longitude are required.';
-          editStatus.classList.add('error');
-          return;
-        }
-
-        if (!isValidLat(lat)) {
-          editStatus.textContent = `Invalid latitude: ${lat}`;
-          editStatus.classList.add('error');
-          return;
-        }
-        if (!isValidLon(lon)) {
-          editStatus.textContent = `Invalid longitude: ${lon}`;
-          editStatus.classList.add('error');
-          return;
-        }
-
-        locations.push({ name, lat, lon });
-      }
-
-      // -------------------------------
-      // Notes (array)
-      // -------------------------------
-      const notesRaw = notesInput.value.trim();
-      const notes = notesRaw === '' ? [] : notesRaw.split('\n').map(s => s.trim());
-
-      // -------------------------------
-      // Comment (string or null)
-      // -------------------------------
-      const commentRaw = commentInput.value.trim();
-      const comment = commentRaw === '' ? null : commentRaw;
-
-      // -------------------------------
-      // Links (array)
-      // -------------------------------
-      const linksRaw = linksInput.value.trim();
-      let links = [];
-      if (linksRaw !== '') {
-        links = linksRaw.split(',').map(s => s.trim()).filter(s => s.length > 0);
-        for (const url of links) {
-          if (!isValidURL(url)) {
-            editStatus.textContent = `Invalid URL in links: ${url}`;
-            editStatus.classList.add('error');
-            return;
+        if (field === 'lat') {
+          if (val === '') {
+            locMap[idx].lat = null;
+          } else if (!isFinite(Number(val))) {
+            alert(`Invalid latitude in row ${idx + 1}`);
+            throw new Error('Invalid latitude');
+          } else {
+            locMap[idx].lat = Number(val);
           }
         }
-      }
 
-      // -------------------------------
-      // Images (array)
-      // -------------------------------
-      const imagesRaw = imagesInput.value.trim();
-      let images = [];
-      if (imagesRaw !== '') {
-        images = imagesRaw.split(',').map(s => s.trim()).filter(s => s.length > 0);
-      }
+        if (field === 'lon') {
+          if (val === '') {
+            locMap[idx].lon = null;
+          } else if (!isFinite(Number(val))) {
+            alert(`Invalid longitude in row ${idx + 1}`);
+            throw new Error('Invalid longitude');
+          } else {
+            locMap[idx].lon = Number(val);
+          }
+        }
+      });
 
-      // -------------------------------
-      // Build updated segment object
-      // -------------------------------
-      const updated = {
-        ...segments[currentIndex],
-        type,
-        title,
-        startLocal: startLocal === '' ? null : startLocal,
-        endLocal: endLocal === '' ? null : endLocal,
-        departLocal: departLocal === '' ? null : departLocal,
-        arriveLocal: arriveLocal === '' ? null : arriveLocal,
-        checkInLocal: checkInLocal === '' ? null : checkInLocal,
-        checkOutLocal: checkOutLocal === '' ? null : checkOutLocal,
-        locations,
-        notes,
-        comment,
-        links,
-        images
-      };
+      seg.locations = Object.keys(locMap)
+        .map(k => locMap[Number(k)])
+        .filter(loc => loc.name !== null || loc.lat !== null || loc.lon !== null);
 
-      segments[currentIndex] = updated;
-      editStatus.textContent = 'Segment updated successfully.';
-    });
-    // -------------------------------
-    // Add New Segment
-    // -------------------------------
+      seg.attachments = textToArray(f.attachments.value);
+
+      seg.cost = seg.cost || {};
+      seg.cost.local = seg.cost.local || {};
+      seg.cost.aud = seg.cost.aud || {};
+
+      seg.cost.incurredDate = f.costIncurredDate.value.trim() || null;
+
+      const cla = f.costLocalAmount.value.trim();
+      seg.cost.local.amount = cla === '' ? null : Number(cla);
+      seg.cost.local.currency = f.costLocalCurrency.value.trim() || null;
+
+      const caa = f.costAudAmount.value.trim();
+      seg.cost.aud.amount = caa === '' ? null : Number(caa);
+
+      const car = f.costAudRateUsed.value.trim();
+      seg.cost.aud.rateUsed = car === '' ? null : Number(car);
+
+      seg.cost.aud.source = f.costAudSource.value.trim() || null;
+
+      const cnotes = f.costCostNotes.value.trim();
+      seg.cost.costNotes = cnotes === '' ? null : cnotes;
+    }
+
     newSegmentBtn.addEventListener('click', () => {
-      resetStatuses();
+      if (!data) return;
 
-      if (!segments) {
-        segmentStatus.textContent = 'Load a JSON file first.';
-        segmentStatus.classList.add('error');
-        return;
-      }
-
-      const newSeg = {
-        type: "",
-        title: "",
-        startLocal: null,
-        endLocal: null,
+      const blank = {
+        type: "default",
+        title: null,
+        description: null,
+        from: null,
+        to: null,
         departLocal: null,
         arriveLocal: null,
+        startLocal: null,
+        endLocal: null,
         checkInLocal: null,
         checkOutLocal: null,
-        locations: [],
+        distanceKm: null,
+        provider: { name: null, dayNumber: null },
         notes: [],
-        comment: null,
-        links: [],
-        images: []
+        bookingRefs: [],
+        confirmation: null,
+        website: null,
+        phone: null,
+        address: null,
+        locations: [],
+        attachments: [],
+        cost: {
+          incurredDate: null,
+          local: { amount: null, currency: null },
+          aud: { amount: null, rateUsed: null, source: null },
+          costNotes: null
+        }
       };
 
-      segments.push(newSeg);
-      populateSegmentSelect();
-      segmentSelect.value = segments.length - 1;
-      currentIndex = segments.length - 1;
-      loadSegmentIntoForm();
+      data.segments.push(blank);
+      currentIndex = data.segments.length - 1;
 
-      segmentStatus.textContent = 'New segment added.';
+      buildSegmentList();
+      populateForm(blank);
+      applyBtn.disabled = false;
+
+      setStatus(`Created new blank segment #${currentIndex + 1}.`);
     });
 
-    // -------------------------------
-    // Delete Segment
-    // -------------------------------
-    deleteSegmentBtn.addEventListener('click', () => {
-      resetStatuses();
+    addLocBtn.addEventListener('click', () => {
+      const idx = f.locationsTableBody.querySelectorAll('tr').length;
 
-      if (currentIndex < 0 || !segments) {
-        segmentStatus.textContent = 'No segment selected.';
-        segmentStatus.classList.add('error');
-        return;
-      }
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td><input type="text" data-loc-index="${idx}" data-field="name"></td>
+        <td><input type="number" step="0.000001" data-loc-index="${idx}" data-field="lat"></td>
+        <td><input type="number" step="0.000001" data-loc-index="${idx}" data-field="lon"></td>
+        <td><button type="button" class="delete-loc" data-del-index="${idx}">X</button></td>
+      `;
 
-      if (!confirm('Delete this segment? This cannot be undone.')) {
-        return;
-      }
-
-      segments.splice(currentIndex, 1);
-      populateSegmentSelect();
-      segmentStatus.textContent = 'Segment deleted.';
+      f.locationsTableBody.appendChild(tr);
     });
 
-    // -------------------------------
-    // Download Updated JSON
-    // -------------------------------
-    downloadBtn.addEventListener('click', () => {
-      resetStatuses();
+    f.locationsTableBody.addEventListener('click', e => {
+      if (!e.target.classList.contains('delete-loc')) return;
 
-      if (!jsonData) {
-        segmentStatus.textContent = 'No JSON loaded.';
-        segmentStatus.classList.add('error');
-        return;
+      const idx = Number(e.target.getAttribute('data-del-index'));
+      const rows = Array.from(f.locationsTableBody.querySelectorAll('tr'));
+
+      if (!rows[idx]) return;
+      rows[idx].remove();
+
+      const newRows = f.locationsTableBody.querySelectorAll('tr');
+      newRows.forEach((tr, newIdx) => {
+        tr.querySelectorAll('input').forEach(inp => {
+          inp.setAttribute('data-loc-index', newIdx);
+        });
+        tr.querySelector('.delete-loc')
+          .setAttribute('data-del-index', newIdx);
+      });
+    });
+
+    applyBtn.addEventListener('click', () => {
+      if (!data || currentIndex == null) return;
+
+      try {
+        applyChangesToSegment(data.segments[currentIndex]);
+        setStatus(`Segment ${currentIndex + 1} updated in memory. Run your schema checker to verify.`);
+      } catch (e) {
+        console.error(e);
       }
+    });
 
-      const jsonStr = JSON.stringify(jsonData, null, 2);
-      const blob = new Blob([jsonStr], { type: 'application/json' });
+    function downloadJson() {
+      if (!data) return;
+
+      const blob = new Blob([JSON.stringify(data, null, 2)], {
+        type: 'application/json'
+      });
+
       const url = URL.createObjectURL(blob);
-
       const a = document.createElement('a');
+
       a.href = url;
-      a.download = 'balkans-2026.json';
+      a.download = 'balkans-2026-updated.json';
+
+      document.body.appendChild(a);
       a.click();
+      document.body.removeChild(a);
 
       URL.revokeObjectURL(url);
-    });
 
+      setStatus('Downloaded updated JSON.');
+    }
+
+    downloadSidebarBtn.addEventListener('click', downloadJson);
+    downloadMainBtn.addEventListener('click', downloadJson);
   </script>
 </body>
 </html>

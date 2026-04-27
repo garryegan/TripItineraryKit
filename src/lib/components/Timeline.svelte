@@ -5,6 +5,9 @@
 
   const { segments, forceOpen = false } = $props();
 
+  /* ---------------------------------------------------------
+     Extract the DATE (yyyy-mm-dd) used for grouping
+     --------------------------------------------------------- */
   function extractDate(seg) {
     return (
       seg.startLocal?.split("T")[0] ||
@@ -18,18 +21,63 @@
     );
   }
 
+  /* ---------------------------------------------------------
+     NEW: Determine the earliest actual datetime for sorting
+     --------------------------------------------------------- */
+  function getEarliestDate(seg) {
+    const fields = [
+      seg.departLocal,
+      seg.arriveLocal,
+      seg.startLocal,
+      seg.endLocal,
+      seg.checkInLocal,
+      seg.checkOutLocal
+    ];
+
+    const valid = fields
+      .filter(v => v && typeof v === "string")
+      .map(v => new Date(v))
+      .filter(d => !isNaN(d));
+
+    if (valid.length === 0) return null;
+
+    return new Date(Math.min(...valid));
+  }
+
+  /* ---------------------------------------------------------
+     Group segments by date AND sort each day's segments
+     --------------------------------------------------------- */
   function groupByDate(list) {
     const groups = {};
+
     for (const seg of list) {
       const key = extractDate(seg);
       if (!groups[key]) groups[key] = [];
       groups[key].push(seg);
     }
+
+    // Sort each day's segments by earliest of the six date fields
+    for (const key in groups) {
+      groups[key].sort((a, b) => {
+        const da = getEarliestDate(a);
+        const db = getEarliestDate(b);
+
+        if (!da && !db) return 0;
+        if (!da) return 1;
+        if (!db) return -1;
+
+        return da - db;
+      });
+    }
+
     return groups;
   }
 
   const grouped = $derived(groupByDate(segments));
 
+  /* ---------------------------------------------------------
+     Sort the day keys chronologically
+     --------------------------------------------------------- */
   const sortedKeys = $derived(
     Object.keys(grouped).sort((a, b) => {
       if (a === "unknown") return 1;
